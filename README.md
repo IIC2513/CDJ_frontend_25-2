@@ -22,7 +22,7 @@ En Lumen existen tres tipos de usuarios:
 * Los moderadores son estudiantes destacados que contribuyen activamente al bienestar de la comunidad, con facultades para revisar denuncias, eliminar contenido inadecuado y publicar anuncios informativos.
 * Los administradores representan al equipo responsable del desarrollo y mantenimiento de la plataforma, encargados de gestionar ramos, usuarios y roles dentro del sistema.
 
-🎓 Rol: Estudiante
+### 🎓 Rol: Estudiante
 
 1. Como estudiante, quiero crear una cuenta y personalizar mi perfil, para conectarme con otros estudiantes y compartir mis intereses académicos.
 2. Como estudiante, quiero iniciar y cerrar sesión de forma segura, para acceder a mis apuntes, tareas y comunidades.
@@ -40,13 +40,13 @@ En Lumen existen tres tipos de usuarios:
 14. Como estudiante, quiero consultar el ranking de mejores contribuyentes, para inspirarme y descubrir autores confiables dentro de la comunidad.
 15. Como estudiante, quiero denunciar publicaciones inadecuadas, para mantener un ambiente seguro y respetuoso.
 
-🛡️ Rol: Moderador
+### 🛡️ Rol: Moderador
 
 16. Como moderador, quiero eliminar publicaciones ofensivas o irrelevantes, para proteger la calidad y el respeto dentro de la comunidad.
 17. Como moderador, quiero recibir y gestionar denuncias de usuarios, para resolver conflictos o comportamientos inapropiados.
 18. Como moderador, quiero publicar anuncios generales o por ramo, para comunicar información importante a todos los usuarios.
 
-⚙️ Rol: Administrador
+### ⚙️ Rol: Administrador
 
 19. Como administrador, quiero gestionar los ramos y categorías de la plataforma, para mantener la estructura organizada y actualizada.
 20. Como administrador, quiero asignar o revocar privilegios de moderador, para mantener un control adecuado sobre la comunidad.
