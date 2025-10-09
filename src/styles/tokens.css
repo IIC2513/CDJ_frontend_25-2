@@ -1,0 +1,9 @@
+:root{
+  /* Principales */
+  --gray-900:#403F3F; --brand-purple:#AA7FCF; --brand-teal:#2494B3;
+  --brand-lime:#B3CD4F; --brand-yellow:#FFC82B; --white:#FDFDFD;
+  /* Secundarios */
+  --sec-lilac:#CFC0DC; --sec-sky:#98CDDB; --sec-olive:#D2E297; --sec-amber:#FFDF82;
+  /* Alertas */
+  --warn:#F9943B; --success:#4CAF50; --error:#F44336;
+}
