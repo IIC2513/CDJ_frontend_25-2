@@ -1,0 +1,234 @@
+/* Fuente Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+:root {
+  --green: #B3CD4F;
+  --white: #fff;
+}
+
+/* ===== Navbar fija superior ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: var(--green);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Contenedor interno */
+.navbar-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: var(--white);
+}
+
+/* Reset general */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Marca izquierda */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--white);
+  text-decoration: none;
+  overflow: visible;
+  border: 0 !important;
+  outline: 0 !important;
+}
+
+.nav-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+  clip-path: inset(0 1px 0 0);
+}
+
+.brand-title {
+  font-weight: 800;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Links centrales */
+.nav-links {
+  display: flex;
+  gap: 28px;
+  margin-left: 16px;
+  flex: 1 1 auto;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  opacity: 0.95;
+  position: relative;
+  padding: 6px 0;
+  line-height: 1.2;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+/* Subrayado del link activo */
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* Botones derecha */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.link-signup {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+.outline-login {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.outline-login:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Botón engranaje */
+.icon-gear {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  border-radius: 10px;
+  padding: 6px 10px;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.icon-gear:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 1200px) {
+  .navbar-inner {
+    gap: 14px;
+    padding: 10px 16px;
+  }
+
+  .nav-links {
+    gap: 22px;
+  }
+
+  .brand-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 920px) {
+  .navbar-inner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 0;
+    gap: 18px;
+  }
+
+  .nav-right {
+    order: 2;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-links {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .outline-login {
+    padding: 8px 14px;
+    border-radius: 10px;
+  }
+
+  .nav-link {
+    padding: 4px 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-title {
+    display: none;
+  }
+
+  .nav-logo {
+    height: 42px;
+  }
+
+  .nav-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-logo {
+    height: 38px;
+  }
+
+  .outline-login {
+    padding: 6px 12px;
+    border-radius: 10px;
+  }
+
+  .icon-gear {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
+}

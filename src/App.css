@@ -1,9 +1,105 @@
+/* ===============================
+   BASE GLOBAL + NAVBAR FIJA
+   =============================== */
+
+/* Espacio superior para compensar la altura de la navbar fija */
+body {
+  padding-top: 80px; /* Ajusta según la altura real de tu Navbar */
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background-color: #fdfdfd;
+  color: #403F3F;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===============================
+   ESTRUCTURA GENERAL
+   =============================== */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box;
 }
+
+/* Contenedor reutilizable */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* ===============================
+   ELEMENTOS COMUNES
+   =============================== */
+
+/* Enlaces base */
+a {
+  color: #2494B3; /* teal de la paleta principal */
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #AA7FCF; /* purple */
+}
+
+/* Superficies o contenedores genéricos
+   (renombrado para no interferir con .card de TeamCard)
+*/
+.app-surface {
+  padding: 2em;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ===============================
+   UTILIDADES Y TIPOGRAFÍA
+   =============================== */
+
+/* Títulos principales */
+h1, h2, h3 {
+  font-family: "Karma", serif;
+  line-height: 1.2;
+  margin: 0.5em 0;
+  color: #403F3F;
+}
+
+/* Párrafos generales */
+p {
+  max-width: 70ch;
+  margin: 0 auto 1.2em;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ===============================
+   RESPONSIVE GENERAL
+   =============================== */
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 72px; /* Navbar más compacta en móvil */
+  }
+
+  #root {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ===============================
+   OTROS ESTILOS PREVIOS (heredados del template Vite)
+   =============================== */
 
 .logo {
   height: 6em;
@@ -11,9 +107,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -33,10 +131,8 @@
   }
 }
 
-.card {
-  padding: 2em;
-}
-
+/* Texto auxiliar (ej. pie de página, notas, etc.) */
 .read-the-docs {
   color: #888;
+  font-size: 0.9rem;
 }

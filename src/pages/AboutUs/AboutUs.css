@@ -1,0 +1,145 @@
+/* ====== Layout general ====== */
+.about {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(16px, 4vw, 40px);
+}
+
+/* Centrado del título y párrafo */
+.about-hero {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero h1 {
+  font-family: "Karma", serif;
+  font-size: clamp(28px, 4vw, 44px);
+  margin-bottom: 8px;
+  color: var(--gray-900);
+}
+
+.about-hero p {
+  max-width: 74ch;
+  line-height: 1.6;
+  margin-bottom: clamp(16px, 2vw, 24px);
+  color: var(--gray-900);
+}
+
+/* ====== Contenedor de tarjetas ====== */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ====== Tarjeta base ====== */
+.cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  width: 250px;
+  height: 320px;
+  border-radius: 16px;
+  color: var(--white);
+  cursor: pointer;
+
+  transition:
+    400ms transform,
+    400ms box-shadow,
+    400ms background-color;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ====== Imágenes ====== */
+.cards .card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  margin-bottom: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== Colores base ====== */
+.cards .naranja {
+  background-color: var(--brand-yellow);
+}
+
+.cards .morada {
+  background-color: var(--brand-purple);
+}
+
+.cards .celeste {
+  background-color: var(--brand-teal);
+}
+
+/* ====== Texto ====== */
+.cards .card p.tip {
+  font-size: 1.1em;
+  font-weight: 700;
+  font-family: "Karma", serif;
+}
+
+.cards .card p.second-text {
+  font-size: 0.9em;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+/* ====== Hover interactivo ====== */
+.cards .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: var(--gray-900);
+  z-index: 10;
+}
+
+.cards .card.naranja:hover {
+  background-color: var(--sec-amber);
+}
+
+.cards .card.morada:hover {
+  background-color: var(--sec-lilac);
+}
+
+.cards .card.celeste:hover {
+  background-color: var(--sec-sky);
+}
+
+/* Efecto blur para las otras tarjetas */
+.cards:hover > .card:not(:hover) {
+  filter: blur(6px);
+  transform: scale(0.9);
+  opacity: 0.8;
+  z-index: 0;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards .card {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* ====== Accesibilidad ====== */
+.cards .card:focus-visible {
+  outline: 3px solid var(--brand-purple);
+  outline-offset: 4px;
+}
