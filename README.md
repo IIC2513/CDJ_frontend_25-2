@@ -77,16 +77,16 @@ En Lumen existen tres tipos de usuarios:
 #### Landing Page [PANTALLAZO DE LO HECHO PROGRAMADO]:
 ![LandingPage - Formato 1](assets/Views/LandingPage_formato1.png)
 ![LandingPage - Formato 2](assets/Views/LandingPage_formato2.png)
-![LandingPage - Formato 3](assets/Views/LandingPage_formato3png)
+![LandingPage - Formato 3](assets/Views/LandingPage_formato3.png)
 
 #### About us [PANTALLAZO DE LO HECHO PROGRAMADO]:
 ![AboutUs - Principal - Formato 1](assets/Views/AboutUs_principal_formato1.png)
 ![AboutUs - Principal - Formato 2](assets/Views/AboutUs_principal_formato2.png)
 ![AboutUs - Principal - Formato 3](assets/Views/AboutUs_principal_formato3.png)
 
-![AboutUs - Feature - Formato 1](AboutUs_mostrarfeature_formato1.png)
-![AboutUs - Feature - Formato 2](AboutUs_mostrarfeature_formato2.png)
-![AboutUs - Feature - Formato 3](AboutUs_mostrarfeature_formato3.png)
+![AboutUs - Feature - Formato 1](assets/Views/AboutUs_mostrarfeature_formato1.png)
+![AboutUs - Feature - Formato 2](assets/Views/AboutUs_mostrarfeature_formato2.png)
+![AboutUs - Feature - Formato 3](assets/Views/AboutUs_mostrarfeature_formato3.png)
 
 *En esta sección la vista de la infomación de cada integrante se hizo mediante un hover interactivo, extraído de [uiverse.io](https://uiverse.io/kamehame-ha/chilly-snake-91).
 
