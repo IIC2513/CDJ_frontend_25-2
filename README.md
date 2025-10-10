@@ -48,7 +48,7 @@ En Lumen existen tres tipos de usuarios:
 16. Como administrador, quiero gestionar los ramos y categorías de la plataforma, para mantener la estructura organizada y actualizada.
 17. Como administrador, quiero asignar o revocar privilegios de moderador, para mantener un control adecuado sobre la comunidad.
 
-## Diagrama Entidad-Relación 📜 (PENDIENTE)
+## Diagrama Entidad-Relación 📜
 ![ER-Model](assets/ER-Model.png)
 
 ## Diseño Web 💻
