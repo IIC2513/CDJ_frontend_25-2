@@ -85,6 +85,8 @@ En Lumen existen tres tipos de usuarios:
 
 ![AboutUs - Principal - Formato 3](assets/Views/AboutUs_principal_formato3.png)
 
+##### Interacciones (seleccionar tarjetas):
+
 ![AboutUs - Feature - Formato 1](assets/Views/AboutUs_mostrarfeature_formato1.png)
 
 ![AboutUs - Feature - Formato 2](assets/Views/AboutUs_mostrarfeature_formato2.png)

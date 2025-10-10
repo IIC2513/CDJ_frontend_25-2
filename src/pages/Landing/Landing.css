@@ -1,3 +1,8 @@
+/* ===== Tipografía ===== */
+
+/* lead → Karma */
+@import url('https://fonts.googleapis.com/css2?family=Karma:wght@400;600&display=swap');
+
 /* ===== Variables ===== */
 :root{
   --yellow:#FFC82B;
@@ -38,11 +43,6 @@ body{
 /* Columna izquierda */
 .brand-hero{ display:flex; align-items:center; gap:12px; margin-bottom:8px; justify-content: center; text-align: center;}
 .wordmark{ height:120px; width:auto; display:block; }
-
-/* ===== Tipografía ===== */
-
-/* lead → Karma */
-@import url('https://fonts.googleapis.com/css2?family=Karma:wght@400;600&display=swap');
 
 .lead{
   margin-top:30px;
