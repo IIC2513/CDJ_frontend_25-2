@@ -32,24 +32,20 @@ En Lumen existen tres tipos de usuarios:
 6. Como estudiante, quiero guardar resúmenes como favoritos, para revisarlos fácilmente cuando los necesite.
 7. Como estudiante, quiero crear tareas y metas personales, para organizar mi progreso académico.
 8. Como estudiante, quiero ver mi avance y estadísticas de estudio, para evaluar mi rendimiento y mantenerme motivado.
-9. Como estudiante, quiero utilizar un temporizador Pomodoro, para concentrarme mejor durante mis sesiones de estudio.
-10. Como estudiante, quiero unirme a salas de estudio por ramo o tema, para aprender en conjunto con otros usuarios.
-11. Como estudiante, quiero participar en foros de discusión por ramo, para resolver dudas y debatir sobre contenidos de manera colaborativa.
-12. Como estudiante, quiero suscribirme a mis ramos, para recibir notificaciones sobre nuevos resúmenes o actividades.
-13. Como estudiante, quiero integrar mis sesiones con Spotify o Discord, para acompañar mi estudio con música o comunicación en grupo.
-14. Como estudiante, quiero consultar el ranking de mejores contribuyentes, para inspirarme y descubrir autores confiables dentro de la comunidad.
-15. Como estudiante, quiero denunciar publicaciones inadecuadas, para mantener un ambiente seguro y respetuoso.
+9. Como estudiante, quiero suscribirme a mis ramos, para recibir notificaciones sobre nuevos resúmenes o actividades.
+10. Como estudiante, quiero consultar el ranking de mejores contribuyentes, para inspirarme y descubrir autores confiables dentro de la comunidad.
+11. Como estudiante, quiero denunciar publicaciones inadecuadas, para mantener un ambiente seguro y respetuoso.
 
 ### 🛡️ Rol: Moderador
 
-16. Como moderador, quiero eliminar publicaciones ofensivas o irrelevantes, para proteger la calidad y el respeto dentro de la comunidad.
-17. Como moderador, quiero recibir y gestionar denuncias de usuarios, para resolver conflictos o comportamientos inapropiados.
-18. Como moderador, quiero publicar anuncios generales o por ramo, para comunicar información importante a todos los usuarios.
+12. Como moderador, quiero eliminar publicaciones ofensivas o irrelevantes, para proteger la calidad y el respeto dentro de la comunidad.
+13. Como moderador, quiero recibir y gestionar denuncias de usuarios, para resolver conflictos o comportamientos inapropiados.
+14. Como moderador, quiero publicar anuncios generales o por ramo, para comunicar información importante a todos los usuarios.
 
 ### ⚙️ Rol: Administrador
 
-19. Como administrador, quiero gestionar los ramos y categorías de la plataforma, para mantener la estructura organizada y actualizada.
-20. Como administrador, quiero asignar o revocar privilegios de moderador, para mantener un control adecuado sobre la comunidad.
+15. Como administrador, quiero gestionar los ramos y categorías de la plataforma, para mantener la estructura organizada y actualizada.
+16. Como administrador, quiero asignar o revocar privilegios de moderador, para mantener un control adecuado sobre la comunidad.
 
 ## Diagrama Entidad-Relación 📜 (PENDIENTE)
 ![ER-Model](assets/ER-Model.png)
