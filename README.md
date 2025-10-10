@@ -35,17 +35,18 @@ En Lumen existen tres tipos de usuarios:
 9. Como estudiante, quiero suscribirme a mis ramos, para recibir notificaciones sobre nuevos resúmenes o actividades.
 10. Como estudiante, quiero consultar el ranking de mejores contribuyentes, para inspirarme y descubrir autores confiables dentro de la comunidad.
 11. Como estudiante, quiero denunciar publicaciones inadecuadas, para mantener un ambiente seguro y respetuoso.
+12. Como estudiante, quiero utilizar un temporizador Pomodoro, para concentrarme mejor durante mis sesiones de estudio.
 
 ### 🛡️ Rol: Moderador
 
-12. Como moderador, quiero eliminar publicaciones ofensivas o irrelevantes, para proteger la calidad y el respeto dentro de la comunidad.
-13. Como moderador, quiero recibir y gestionar denuncias de usuarios, para resolver conflictos o comportamientos inapropiados.
-14. Como moderador, quiero publicar anuncios generales o por ramo, para comunicar información importante a todos los usuarios.
+13. Como moderador, quiero eliminar publicaciones ofensivas o irrelevantes, para proteger la calidad y el respeto dentro de la comunidad.
+14. Como moderador, quiero recibir y gestionar denuncias de usuarios, para resolver conflictos o comportamientos inapropiados.
+15. Como moderador, quiero publicar anuncios generales o por ramo, para comunicar información importante a todos los usuarios.
 
 ### ⚙️ Rol: Administrador
 
-15. Como administrador, quiero gestionar los ramos y categorías de la plataforma, para mantener la estructura organizada y actualizada.
-16. Como administrador, quiero asignar o revocar privilegios de moderador, para mantener un control adecuado sobre la comunidad.
+16. Como administrador, quiero gestionar los ramos y categorías de la plataforma, para mantener la estructura organizada y actualizada.
+17. Como administrador, quiero asignar o revocar privilegios de moderador, para mantener un control adecuado sobre la comunidad.
 
 ## Diagrama Entidad-Relación 📜 (PENDIENTE)
 ![ER-Model](assets/ER-Model.png)
