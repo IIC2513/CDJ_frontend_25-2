@@ -18,7 +18,7 @@ Los usuarios principales son estudiantes universitarios, inicialmente solo de la
 ## Historia de Usuarios 👥 
 
 En Lumen existen tres tipos de usuarios:
-* Los estudiantes son el núcleo de la comunidad: pueden crear, compartir y comentar resúmenes, además de organizar sus metas y participar en foros o salas de estudio.
+* Los estudiantes son el núcleo de la comunidad: pueden crear, compartir y comentar resúmenes, además de organizar sus metas en la plataforma.
 * Los moderadores son estudiantes destacados que contribuyen activamente al bienestar de la comunidad, con facultades para revisar denuncias, eliminar contenido inadecuado y publicar anuncios informativos.
 * Los administradores representan al equipo responsable del desarrollo y mantenimiento de la plataforma, encargados de gestionar ramos, usuarios y roles dentro del sistema.
 
