@@ -41,7 +41,7 @@ En Lumen existen tres tipos de usuarios:
 
 13. Como moderador, quiero eliminar publicaciones ofensivas o irrelevantes, para proteger la calidad y el respeto dentro de la comunidad.
 14. Como moderador, quiero recibir y gestionar denuncias de usuarios, para resolver conflictos o comportamientos inapropiados.
-15. Como moderador, quiero publicar anuncios generales o por ramo, para comunicar información importante a todos los usuarios.
+15. Como moderador, quiero publicar anuncios generales para comunicar información importante a todos los usuarios.
 
 ### ⚙️ Rol: Administrador
 
