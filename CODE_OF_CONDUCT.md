@@ -125,4 +125,4 @@ Aplica a todas las actividades relacionadas con el desarrollo del proyecto del c
 5. Si la situación requiere orientación adicional, informaremos al ayudante del grupo para asegurar una resolución adecuada y transparente.
 
 ## 4. Firma de cada integrante del grupo
-En esta sección deberán colocar el nombre y la firma de cada uno de los integrantes del equipo. 
+![Firmas](assets/Firmas.png)
