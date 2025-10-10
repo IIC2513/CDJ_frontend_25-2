@@ -1,100 +1,70 @@
-/* ====== Contenedor ====== */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+/* Contenedor (se usa en AboutUs) */
+.cards{
+  display:flex; flex-wrap:wrap; justify-content:center; gap:24px;
 }
 
-/* ====== Tarjeta base ====== */
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Tarjeta base */
+.card{
+  --bg:#AA7FCF;       /* color lleno (se setea por accent-*) */
+  --bg-light:#CFC0DC; /* tono claro para expandida */
+  --fg:#fff;          /* texto sobre color lleno */
+  --fg-dark:#403F3F;  /* texto sobre color claro */
 
-  width: 250px;
-  height: 320px;
+  position: relative;
+  width: 260px; height: 320px;
   border-radius: 16px;
-  color: var(--white);
+  background: var(--bg);
+  color: var(--fg);
   cursor: pointer;
-
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease,
-    filter 0.4s ease;
-
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+  overflow: hidden;
+  transition: transform .35s ease, box-shadow .35s ease, background-color .35s ease;
 }
 
-/* ====== Colores de fondo ====== */
-.accent-lilac {
-  background-color: var(--brand-purple);
+.card:hover{ transform: scale(1.04); box-shadow: 0 12px 26px rgba(0,0,0,.22); }
+.card:focus-visible{ outline: 3px solid #fff; outline-offset: 4px; }
+
+/* Dos caras: mostramos una u otra */
+.card-face{
+  position:absolute; inset:0;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center; text-align:center;
+  padding: 20px;
+  transition: opacity .25s ease;
 }
-.accent-teal {
-  background-color: var(--brand-teal);
+.front{ opacity:1; }
+.back{ opacity:0; }
+
+/* Expandida: fondo claro y cambia cara visible */
+.card.flipped{
+  background: var(--bg-light);
+  color: var(--fg-dark);
+  transform: scale(1.04);
 }
-.accent-amber {
-  background-color: var(--brand-yellow);
-}
-.accent-purple {
-  background-color: var(--brand-purple);
+.card.flipped .front{ opacity:0; pointer-events:none; }
+.card.flipped .back{ opacity:1; }
+
+/* Imagen */
+.card img{
+  width:120px; height:120px; border-radius:50%;
+  object-fit:cover; margin-bottom:12px;
+  border:4px solid rgba(255,255,255,.85);
+  box-shadow: 0 4px 10px rgba(0,0,0,.2);
 }
 
-/* ====== Imagen ====== */
-.card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.85);
-  margin-bottom: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+/* Tipografías */
+.card-title{ font-family:"Karma",serif; font-size:1.25rem; font-weight:700; margin:6px 0 2px; }
+.card-role{ font-family:"Inter",sans-serif; font-size:.95rem; opacity:.95; }
+.card-bio{ max-width: 52ch; line-height:1.6; font-size:.98rem; }
 
-/* ====== Texto ====== */
-.card-title {
-  font-family: "Karma", serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin: 6px 0 2px;
-  color: var(--white);
-}
+/* Paletas por acento (tokens del proyecto) */
+.accent-lilac { --bg:#AA7FCF; --bg-light:#CFC0DC; }
+.accent-teal  { --bg:#2494B3; --bg-light:#98CDDB; }
+.accent-amber { --bg:#FFC82B; --bg-light:#FFDF82; }
+.accent-purple{ --bg:#AA7FCF; --bg-light:#CFC0DC; }
 
-.card-role {
-  font-family: "Inter", sans-serif;
-  font-size: 0.95rem;
-  opacity: 0.9;
-  color: var(--white);
-}
-
-/* ====== Hover ====== */
-.cards .card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-}
-
-.cards:hover > .card:not(:hover) {
-  filter: blur(6px) saturate(0.9);
-  transform: scale(0.95);
-  opacity: 0.85;
-}
-
-/* ====== Responsive ====== */
-@media (max-width: 768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  .card {
-    width: 90%;
-    height: auto;
-  }
-}
-
-/* ====== Accesibilidad ====== */
-.card:focus-visible {
-  outline: 3px solid var(--white);
-  outline-offset: 4px;
+/* Responsive */
+@media (max-width:768px){
+  .cards{ flex-direction:column; align-items:center; }
+  .card{ width: 92%; height: 300px; }
 }
