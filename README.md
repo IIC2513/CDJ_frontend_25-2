@@ -63,25 +63,46 @@ En Lumen existen tres tipos de usuarios:
 ![Tipografías](assets/Design/Typography.png)
 
 ### 🔍 Vistas principales
-![Diseño en computador](assets/Views/Comuptador.png)
-
-![Diseño en tablet](assets/Views/Tablet.png)
-
-![Diseño en celular](assets/Views/Celular.jpg)
+![Mockup1](assets/Views/Mockups(1).png)
+![Mockup2](assets/Views/Mockups(2).png)
+![Mockup3](assets/Views/Mockups(3).png)
+![Mockup4](assets/Views/Mockups(4).png)
+![Mockup5](assets/Views/Mockups(5).png)
 
 ### 👀 Logo
 ![Isologo](assets/Isologo.png)
 ![Isotipo](assets/Isotipo.png)
 
 ### 📱 Ejemplo de aplicación
-#### Landing Page:
-![Ejemplo de aplicación](assets/Views/VistaLandingPage.png)
+#### Landing Page [PANTALLAZO DE LO HECHO PROGRAMADO]:
+![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(1).png)
 
-#### About us:
+#### About us [PANTALLAZO DE LO HECHO PROGRAMADO]:
 ![Ejemplo de aplicación](assets/Views/VistaAboutUs1.png)
 
 ![Ejemplo de aplicación](assets/Views/VistaAboutUs2.png)
-*En esta sección la vista de la infomación de cada integrante se hará mediante un hover interactivo, extraído de [uiverse.io](https://uiverse.io/kamehame-ha/chilly-snake-91).
+
+*En esta sección la vista de la infomación de cada integrante se hizo mediante un hover interactivo, extraído de [uiverse.io](https://uiverse.io/kamehame-ha/chilly-snake-91).
+
+#### Explora
+![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(2).png)
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(1).png)
+
+#### Mi página
+![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(3).png)
+
+#### Mis archivos
+![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(4).png)
+
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(2).png)
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(3).png)
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(4).png)
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(5).png)
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(6).png)
+![Ejemplo de aplicación](assets/Views/ventanasemergentes(7).png)
+
+#### Informaciones
+![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(5).png)
 
 ## Referencias ⚠️
 * Uso de inteligencia artificial (ChatGPT - Copilot) para formular textos más profesionales, para hacer el logo y para generar la imagen de las personas abrazadas en el _landing page_.
