@@ -1,6 +1,6 @@
 .instructions-wrapper {
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 1500px;
   margin: auto;
   font-family: 'Inter', sans-serif;
 }
@@ -17,28 +17,40 @@
 }
 
 .instructions-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
+  column-count: 2;
+  column-gap: 1.5rem;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .instructions-grid {
-    grid-template-columns: 1fr 1fr;
+    column-count: 1;
   }
 }
 
 .instruction-card {
+  display: inline-block;
+  width: 100%;
   background: #f9f9f9;
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.107);
   text-align: center;
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.instruction-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(152,205,219, 0.3);
+  border: 1px solid rgba(152,205,219, 0.5);
 }
 
 .instruction-img {
   width: 100%;
-  max-height: 160px;
+  max-width: 600px;
+  height: auto;
   object-fit: contain;
   margin-bottom: 1rem;
 }
@@ -46,7 +58,7 @@
 .instruction-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #4f46e5;
+  color: var(--brand-teal);
 }
 
 .instruction-card p {

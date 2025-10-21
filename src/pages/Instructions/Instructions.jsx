@@ -1,61 +1,78 @@
 import "./Instructions.css";
 import ejemploImg from "../../../assets/cdj.png";
+import Comentarios from "../../../assets/Comentarios.png";
+import BarraBusqueda from "../../../assets/BarraBusqueda.png";
+import ExplorarApuntes from "../../../assets/ExplorarApuntes.png";
+import Info from "../../../assets/InformacionesImg.png";
+import MisArchivosImg from "../../../assets/MisArchivos.png";
+import SubirArchivo from "../../../assets/SubirArchivo.png";
+import VisualizarPublicacion from "../../../assets/VisualizarPublicacion.png";
 
 const instrucciones = [
   {
-    titulo: "Sube tus apuntes",
-    cuerpo: "Comparte tus materiales con la comunidad UC.",
-    imagen: ejemploImg,
+    titulo: "Busca apuntes de tu interés",
+    cuerpo: "En la pestaña <b>'Explorar'</b>, podrás buscar y acceder a apuntes compartidos por otros estudiantes. Para visualizar más información sobre un apunte, solo debes hacer clic en él, lo que desplegará una ventana con detalles adicionales y opciones para guardar o comprar el material.",
+    imagen: ExplorarApuntes,
+  },
+  {
+    titulo: "Sube y comparte tus apuntes",
+    cuerpo: "Comparte tus materiales a la comunidad UC, a través de la pestaña <b>'Mi página'</b>, podrás subir archivos en formato PDF o imagen, donde deberás colocarles un título descriptivo, un ramo y una breve descripción para que otros usuarios puedan encontrarlos fácilmente. Además, podrás asignarles un precio si es que deseas venderlos o compartirlos de forma gratuita.",
+    imagen: SubirArchivo,
   },
   {
     titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
+    cuerpo: "Desde <b>'Mi página'</b> puedes crear metas académicas personalizadas. Agrega tareas, marca tu progreso y mantén el foco en tus objetivos. Esta herramienta te permite visualizar tu avance y mantenerte motivado durante el semestre.",
+    imagen: ejemploImg,
+  }, 
+  {
+    titulo: "Revisa tus estadísticas",
+    cuerpo: "En tu perfil encontrarás la sección <b>'Mi página'</b>, donde podrás ver cuántos archivos has publicado, cuántos likes has recibido y cuántos apuntes has adquirido. Es una forma de medir tus avances y tu impacto en la comunidad.",
     imagen: ejemploImg,
   },
   {
-    titulo: "Organiza tus metas",
-    cuerpo: "Lorem ipsum dolor sit amet consectetur adipiscing elit morbi, lectus quisque felis mattis condimentum luctus cum, magnis fringilla aliquet scelerisque mollis quis velit. Nullam placerat facilisi dictumst id justo enim taciti sociis malesuada, hendrerit consequat est felis potenti nulla tellus bibendum porta egestas, feugiat vestibulum torquent laoreet nascetur sociosqu habitant montes. Suspendisse hendrerit tellus mauris ante accumsan netus dignissim facilisi, platea montes erat potenti sollicitudin vestibulum porta neque parturient, imperdiet felis feugiat rutrum cras maecenas velit. Venenatis gravida quisque donec vulputate congue sapien vestibulum felis lobortis, montes fames nisi cubilia nostra porta fermentum mi tortor, dapibus praesent nec massa curae enim euismod hendrerit. \n Eros parturient nec quam semper nascetur ac habitasse curabitur pretium, dictum viverra conubia penatibus nunc vestibulum a dis, interdum cursus sollicitudin mattis duis erat in quis. Nulla per integer mus vel aliquet dapibus commodo, montes luctus ut dictumst phasellus nostra, vehicula eleifend lacus in erat condimentum. Molestie vehicula facilisis praesent pretium litora faucibus nibh tristique pulvinar, cursus nam magna purus mollis egestas enim aliquet lacinia, habitasse gravida potenti euismod interdum elementum sodales congue.",
-    imagen: ejemploImg,
-  },{
-    titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
-    imagen: ejemploImg,
-  },{
-    titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
-    imagen: ejemploImg,
-  },{
-    titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
-    imagen: ejemploImg,
-  },{
-    titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
-    imagen: ejemploImg,
-  },{
-    titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
-    imagen: ejemploImg,
-  },{
-    titulo: "Organiza tus metas",
-    cuerpo: "Crea listas de tareas y sigue tu progreso académico.",
+    titulo: "Gestiona tus archivos",
+    cuerpo: "En la pestaña <b>'Mis archivos'</b> puedes acceder a todos tus materiales. Se dividen en <i>Publicados</i> (visibles para otros), <i>Borradores</i> (aún no compartidos) y <i>Adquiridos</i> (archivos que guardaste o compraste). Desde aquí puedes editar, eliminar o publicar tus borradores.",
+    imagen: MisArchivosImg,
+  },
+  {
+    titulo: "Recibe y da retroalimentación",
+    cuerpo: "Cada archivo tiene una sección de <b>comentarios</b> donde puedes dejar tu opinión, agradecer al autor o hacer sugerencias. También puedes recibir feedback sobre tus propios apuntes, lo que ayuda a mejorar su calidad y utilidad.",
+    imagen: Comentarios,
+  },
+  {
+    titulo: "Explora por ramo, contenido o usuario",
+    cuerpo: "La barra de búsqueda en <b>'Explorar'</b> permite filtrar por ramo, contenido específico o nombre de usuario. Así puedes encontrar rápidamente lo que necesitas o seguir a quienes comparten materiales útiles. Además, puedes ordenar los archivos según popularidad o precio, para facilitar tu búsqueda según tus necesidades.",
+    imagen: BarraBusqueda,
+  },
+  {
+    titulo: "Recibe anuncios importantes",
+    cuerpo: "En la pestaña <b>'Informaciones'</b> verás mensajes del moderador sobre actualizaciones, nuevos cursos disponibles, mejoras técnicas o recordatorios académicos. Es el canal oficial para mantenerte al día con lo que pasa en Lumen.",
+    imagen: Info,
+  },
+  {
+    titulo: "Visualiza tus archivos fácilmente",
+    cuerpo: "Los archivos que adquieres se pueden visualizar directamente desde la plataforma en <b>'Mis archivos'</b>. Hemos mejorado la experiencia para que puedas hacer zoom, buscar dentro del PDF y navegar sin necesidad de descargar.",
+    imagen: VisualizarPublicacion,
+  },
+  {
+    titulo: "Usa el pomodoro para estudiar",
+    cuerpo: "En <b>'Mi página'</b> puedes activar el temporizador Pomodoro para estudiar en ciclos de 25 minutos. Cada sesión se registra en tus estadísticas, ayudándote a medir tu concentración y progreso durante la semana.",
     imagen: ejemploImg,
   },
-  // ...agrega hasta 20 elementos
 ];
 
 const Instructions = () => {
   return (
     <div className="instructions-wrapper">
       <header className="instructions-header">
-        <h1 className="instructions-title">¿Cómo usar Lumen?</h1>
+        <h1 className="instructions-title">🧑🏼‍🏫 ¿Cómo usar Lumen? 🧑🏼‍🏫</h1>
       </header>
 
       <section className="instructions-grid">
         {instrucciones.map((item, index) => (
           <div className="instruction-card" key={index}>
             <h3>{item.titulo}</h3>
-            <p>{item.cuerpo}</p>
+            <p dangerouslySetInnerHTML={{ __html: item.cuerpo }} />
             <img src={item.imagen} alt={item.titulo} className="instruction-img" />
           </div>
         ))}
