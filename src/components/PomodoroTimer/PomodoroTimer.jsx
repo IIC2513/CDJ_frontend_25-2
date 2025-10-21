@@ -79,6 +79,7 @@ export default function PomodoroTimer({ initialWorkMinutes = 25 }) {
         return (
           <>
             <button className="btn warning" onClick={pause}>PAUSA</button>
+            <> </>
             <button className="btn danger" onClick={stop}>DETENER</button>
           </>
         );
@@ -86,6 +87,7 @@ export default function PomodoroTimer({ initialWorkMinutes = 25 }) {
         return (
           <>
             <button className="btn danger2" onClick={start}>REANUDAR</button>
+            <> </>
             <button className="btn danger" onClick={stop}>DETENER</button>
           </>
         );

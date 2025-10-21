@@ -27,3 +27,40 @@
 .btn.danger2 {
   background:#1c8ca2;
 }
+
+.pomo-time-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4b5563;
+}
+
+.pomo-time-selector select {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pomo-time-selector select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.pomo-time-selector label {
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.pomo-time-selector select::after {
+  content: "⏱️";
+  margin-left: 8px;
+}
