@@ -37,6 +37,14 @@
   text-align: center;
   margin-bottom: 1.5rem;
   break-inside: avoid;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.instruction-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(152,205,219, 0.3);
+  border: 1px solid rgba(152,205,219, 0.5);
 }
 
 .instruction-img {
