@@ -14,7 +14,7 @@ const DATOS_PRUEBA = [
   { id: "n10", curso: "Álgebra Lineal - MAT1203", titulo: "Vectores propios", autor: "María F.", fecha: "25/09/2022", meGusta: 0, precio: 0 },
 ];
 
-// Agrupar apuntes por curso
+/* Agrupar apuntes por curso*/
 const agruparPorCurso = (apuntes) => {
   const mapa = new Map();
   apuntes.forEach((apunte) => {
@@ -25,7 +25,7 @@ const agruparPorCurso = (apuntes) => {
   return Array.from(mapa.entries());
 };
 
-// Botones de ordenamiento
+/* Botones de ordenamiento */
 function ControlesDeOrdenamiento({ ordenarPor, setOrdenarPor }) {
   return (
     <div role="group" aria-label="Ordenar por">
@@ -47,13 +47,13 @@ function ControlesDeOrdenamiento({ ordenarPor, setOrdenarPor }) {
   );
 }
 
-// Componente principal
+/* Componente principal */
 export default function PaginaExplora() {
   const [entradaBusqueda, setEntradaBusqueda] = useState("");
   const [busqueda, setBusqueda] = useState("");
   const [ordenarPor, setOrdenarPor] = useState("meGusta");
 
-  // Filtrado + ordenamiento + agrupación
+  /* Filtrado + ordenamiento + agrupación */
   const apuntesFiltrados = useMemo(() => {
     const q = busqueda.trim().toLowerCase();
 

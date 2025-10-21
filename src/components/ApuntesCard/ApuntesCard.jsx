@@ -10,7 +10,7 @@ export default function ApuntesCard({ apunte }) {
   const abrirModal = useCallback(() => setMostrarModal(true), []);
   const cerrarModal = useCallback(() => setMostrarModal(false), []);
 
-  // Accesibilidad: abrir con Enter o Space
+  /*  Accesibilidad -> abrir con Enter o Space */
   const onKeyOpen = (e) => {
     if (e.key === "Enter" || e.key === " ") {
       e.preventDefault();
@@ -37,12 +37,14 @@ export default function ApuntesCard({ apunte }) {
         onClick={abrirModal}
         onKeyDown={onKeyOpen}
       >
+        {/* Badge de me gusta */}
         <span className="badge" aria-label={`Me gusta: ${apunte.meGusta}`}>
           {apunte.meGusta}
         </span>
 
         <div className="title">{apunte.titulo}</div>
 
+        {/* imagen, ahora predeterminada */}
         <div className="paper" aria-hidden>
           <img
             src={iconoApunte}
@@ -52,6 +54,7 @@ export default function ApuntesCard({ apunte }) {
           />
         </div>
 
+       {/* Datos del articulo */}
         <div className="meta">
           Publicado por <strong>{apunte.autor}</strong>
           <br />
@@ -63,6 +66,7 @@ export default function ApuntesCard({ apunte }) {
         </div>
       </article>
 
+    {/* Habilitar que se pueda abrir el card modal*/}
       {mostrarModal && (
         <ApuntesCardModal apunte={apunte} onClose={cerrarModal} />
       )}

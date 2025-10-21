@@ -9,7 +9,7 @@
   --accent-blue: #2494b3;
 }
 
-/* ---------- Tarjeta del apunte ---------- */
+/* Tarjeta del apunte */
 .card-explora {
   position: relative;
   background: var(--card-bg);
@@ -28,7 +28,7 @@
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Badge (likes) ---------- */
+/*  Badge -> likes */
 .badge {
   position: absolute;
   top: -10px;      
@@ -54,8 +54,7 @@
   font-size: 14px;
 }
 
-/* ---------- Icono de hoja ---------- */
-
+/* Img del apunte */
 .apunte-img {
   width: 90px;
   height: 120px;
@@ -65,14 +64,14 @@
   transition: transform 0.25s ease;
   display: block;
   margin-left: auto;
-  margin-right: auto; /* centrado horizontal */
+  margin-right: auto; 
 }
 
 .apunte-img:hover {
   transform: scale(1.05);
 }
 
-/* ---------- Texto ---------- */
+/*  Texto  */
 .title {
   font-weight: 1000;
   font-family: Inter;
@@ -88,7 +87,7 @@
 
 }
 
-/* ---------- Precio ---------- */
+/*  Precio  */
 .price {
   margin-top: -12px;
   font-weight: 800;
@@ -104,7 +103,7 @@
   color: var(--accent-blue);
 }
 
-/* ---------- Responsivo ---------- */
+/*  Responsivo */
 @media (max-width: 640px) {
   .paper {
     height: 130px;

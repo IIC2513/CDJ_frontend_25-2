@@ -5,7 +5,7 @@ import iconoApunte from "../../assets/explora/apuntes2.png";
 export default function ApuntesCardModal({ apunte, onClose }) {
   if (!apunte) return null;
 
-  // Cerrar con ESC
+  /* funcionalidad extra para cerrar modal con ESC */
   useEffect(() => {
     const handler = (e) => e.key === "Escape" && onClose();
     window.addEventListener("keydown", handler);
@@ -28,7 +28,7 @@ export default function ApuntesCardModal({ apunte, onClose }) {
         role="dialog"
         aria-modal="true"
         aria-labelledby="acm-title"
-        onClick={(e) => e.stopPropagation()} // evita cerrar si se hace click dentro
+        onClick={(e) => e.stopPropagation()} /* evita cerrar si se hace click dentro */
       >
         {/* Botón de cierre */}
         <button className="acm-close" aria-label="Cerrar" onClick={onClose}>

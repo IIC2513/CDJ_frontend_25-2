@@ -9,23 +9,25 @@
   z-index: 1000;
 }
 
-/* Contenedor modal */
+/* Contenedor */
 .acm{
   width: min(920px, 92vw);
+  max-height: 92vh;
   background: #eaeaea;
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0,0,0,.25);
   overflow: hidden;
   position: relative;
   animation: acm-pop .22s ease;
+  display: flex;
+  flex-direction: column;
 }
-
 @keyframes acm-pop {
   from { transform: scale(.96); opacity: 0; }
   to   { transform: scale(1);   opacity: 1; }
 }
 
-/* Botón cerrar */
+/* X */
 .acm-close{
   position: absolute;
   top: 12px; right: 16px;
@@ -37,27 +39,24 @@
 }
 .acm-close:hover{ opacity: 1; }
 
-/* Header (celeste) */
+/* Header */
 .acm-header{
   height: 56px;
-  background: #bfe8f1; /* celeste de la maqueta */
+  background: #bfe8f1;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
   padding: 0 18px 0 16px;
 }
-
 .acm-header-left{
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
 .acm-header-icon{
   width: 22px; height: 22px; object-fit: contain;
 }
-
 .acm-header-title{
   margin: 0;
   font-size: 16px;
@@ -65,46 +64,47 @@
   color: #1f2937;
 }
 
-/* Cuerpo: main (izq) + comments (der) */
 .acm-body{
   display: grid;
-  grid-template-columns: 1fr 300px; /* izquierda (main) + derecha (comentarios) */
+  grid-template-columns: 1fr 300px; /* main + comments */
   gap: 0;
   min-height: 320px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Main en dos columnas internas: imagen izq + texto der */
+/* Main izq */
 .acm-main{
   padding: 24px 28px;
   display: flex;
   align-items: flex-start;
-  gap: 24px;              /* separación entre imagen y texto */
+  gap: 24px;         
 }
 
-/* contenedor de la imagen */
+/* contenedor imagen */
 .image-card{
-  flex: 0 0 220px;        /* ancho fijo para la columna de imagen */
+  flex: 0 0 220px;        
   display: flex;
   justify-content: center;
   align-items: flex-start;
 }
 
-/* imagen grande del apunte */
+/* imagen principal */
 .acm-hero{
   margin-top: 30px;
-  width: 150px;           /* controla el tamaño de la ilustración */
+  width: 150px;           
   height: auto;
   display: block;
 }
 
-/* columna de texto a la derecha */
+/* columna texto */
 .text-card{
-  position: relative;      /* necesario para posicionar la badge dentro */
+  position: relative;     
   flex: 1 1 auto;
   text-align: left;
 }
 
-/* ⭐ Badge dentro del bloque de texto, arriba-derecha (flotando) */
+/* badge (estrella + número) */
 .modal-badge{
   position: absolute;
   top: -8px;
@@ -127,25 +127,24 @@
   font-size: 14px;
 }
 
-/* descripción con mejor lectura */
 .acm-desc{
   line-height: 1.55;
   color: #374151;
   margin: 8px 0 10px;
 }
 
-/* CTA */
 .acm-cta{
   margin-top: 6px;
   padding: 10px 18px;
   background: #32b05f;
   color: #fff;
   font-weight: 800;
-  border: 0; border-radius: 8px;
+  border: 0;
+  border-radius: 8px;
   cursor: pointer;
 }
 
-/* Panel de comentarios (derecha) */
+/* Comentarios */
 .acm-comments{
   border-left: 1px solid #e5e7eb;
   border-right: 1px solid #e5e7eb;
@@ -158,6 +157,8 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  gap: 10px;
+  min-height: 0;
 }
 
 .acm-comments-title{
@@ -166,8 +167,7 @@
   text-align: center;
 }
 
-
-/* Comentario dentro de la caja gris */
+/* comentario */
 .acm-comment{
   display: flex;
   align-items: center;
@@ -184,16 +184,13 @@
   background: linear-gradient(135deg, #48c6ef, #6f86d6);
 }
 
-
-/* Burbuja del comentario */
+/* burbuja */
 .comment {
   background: #f2f2f2;
   border-radius: 8px;
   padding: 8px 12px;
-  max-width: 220px; /* límite opcional para evitar textos demasiado anchos */
+  max-width: 220px;
 }
-
-/* Texto dentro de la burbuja */
 .comment p {
   margin: 0;
   font-size: 14px;
@@ -202,10 +199,10 @@
   word-wrap: break-word;
 }
 
-/* Input dentro de la caja gris */
+/* input */
 .acm-input{
   width: 100%;
-  margin-top: 150px;
+  margin-top: 8px;
   border: 1px solid #e1e5ea;
   border-radius: 8px;
   padding: 9px 12px;
@@ -213,19 +210,100 @@
   background: #f2f2f2;
 }
 
-/* Responsive: apila main cuando es móvil */
+/* Responsive */
 @media (max-width: 720px){
-  .acm-body{ grid-template-columns: 1fr; }
-  .acm-main{
-    flex-direction: column;      /* imagen arriba, texto abajo en mobile */
-    align-items: center;
-    gap: 16px;
+  .acm-header{
+    height: 48px;
+    padding: 0 12px;
   }
+  .acm-header-title{ font-size: 15px; }
+
+  .acm-body{ grid-template-columns: 1fr; }
+
+  .acm-main{
+    padding: 16px 16px 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
   .image-card{ flex: 0 0 auto; }
-  .text-card{ width: 100%; text-align: center; }
-  .modal-badge{ right: 0; }      /* ajusta la estrella en móvil */
+  .acm-hero{
+    margin-top: 6px;
+    width: 112px;
+  }
+
+  .text-card{
+    width: 100%;
+    text-align: left;
+  }
+
+  .modal-badge{
+    top: -6px;
+    right: -4px;
+    transform: scale(.92);
+  }
+
+  .acm-desc{ 
+    font-size: 14px; 
+    line-height: 1.45; 
+    margin: 6px 0 8px; 
+  }
+
+  .acm-cta{
+    padding: 9px 14px;
+    font-size: 14px;
+  }
+
   .acm-comments{
     border-left: 0;
     border-top: 1px solid #e5e7eb;
+    border-right: 0;
+    margin: 8px 0 -30px;
+    padding: 14px 12px;
   }
+
+  .acm-comments-title{
+    margin: 0 0 8px;
+    font-size: 14px;
+    letter-spacing: .04em;
+  }
+
+  .acm-comment{
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+  }
+
+  .acm-avatar{
+    width: 36px; height: 35px;
+  }
+
+  .comment{
+    max-width: 100%;
+    padding: 8px 10px;
+  }
+
+  .acm-input{
+    margin-top: 20px;
+    padding: 9px 10px;
+    font-size: 14px;
+  }
+}
+
+  .acm-close{
+    margin-top: -17px;
+    margin-right: -25px;
+  }
+
+/* Versión angosta */
+@media (max-width: 420px){
+  .acm{
+    width: 96vw;
+    border-radius: 12px;
+  }
+  .acm-header{ height: 44px; }
+  .acm-header-title{ font-size: 14px; }
+  .acm-hero{ width: 100px; }
+  .modal-badge{ transform: scale(.88); }
 }
