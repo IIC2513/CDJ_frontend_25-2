@@ -1,0 +1,2 @@
+.mp-tag{ background:#eff1f3; color:#333; padding:8px 12px; border-radius:999px; font-weight:600; font-size:13px; }
+.mp-tag.active{ background:var(--green); color:#fff; }
