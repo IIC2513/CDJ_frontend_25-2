@@ -1,0 +1,236 @@
+/* Contenedor general */
+.page.mp {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 48px) clamp(16px, 4vw, 60px);
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.h1-mipagina {
+  margin-top: 0px;
+  text-align: left;
+}
+
+.mp-grid {
+  display: grid;
+  width: 100%;
+  gap: 24px;
+  align-items: start;
+  isolation: isolate;
+}
+.mp-grid > section {
+  position: relative;
+  z-index: 0;
+  align-self: start;
+}
+
+/* Bloques internos */
+.stats-row {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+/* Tarjetas base */
+.mp-card,
+.progress-card,
+.todo-card,
+.alerts-card,
+.pomo-card {
+  background: var(--card);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  position: relative;
+  z-index: 0;
+  transition: box-shadow 0.15s ease;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.mp-card:hover,
+.progress-card:hover,
+.todo-card:hover,
+.alerts-card:hover,
+.pomo-card:hover {
+  transform: none;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.mp-card-title {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  color: #6b7280;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.todo-card {
+  height: auto;
+}
+
+.mp-card.subs {
+  padding: 34px;
+}
+
+
+/* Table y pc (>=768px): 3 columnas x 2 filas centradas  */
+@media (min-width: 768px) {
+  /* Grid de 3 columnas iguales, centrado y con ancho máximo controlado */
+  .mp-grid {
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 28px;
+    justify-content: center;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  /* Orden lógico:
+     Fila 1: Stats | Progress | To-Do
+     Fila 2: Pomodoro | Suscripciones | Alertas */
+  .g-stats {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .g-progress {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .g-todo {
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .g-pomodoro {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .g-subs {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .g-alerts {
+    grid-column: 3;
+    grid-row: 2;
+  }
+
+  /* 3 stats en una sola fila */
+  .stats-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Igualar alturas visuales */
+  .progress-card,
+  .todo-card {
+    min-height: 180px;
+  }
+
+  /* To-Do con altura extendida */
+  .todo-card {
+    height: 60vh;
+  }
+}
+
+/* Responsivo */
+:where(.mp-card, .progress-card, .todo-card, .alerts-card, .pomo-card),
+:where(.mp-card, .progress-card, .todo-card, .alerts-card, .pomo-card) * {
+  min-width: 0;
+}
+
+img,
+svg,
+canvas,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Movil angosto */
+@media (max-width: 600px) {
+  .mp-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .stats-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*  Ajuste perfecto para iPad (Mini, Air, Pro Portrait y Landscape) (768–1199px)  */
+@media (min-width: 768px) and (max-width: 1199px){
+  /* Grid 3x2 adaptable y centrado */
+  .mp-grid{
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+    gap: 24px;
+    column-gap: 28px;
+    max-width: 940px;            
+    justify-content: center;
+    margin-inline: auto;
+  }
+
+  /* Encabezado más alineado */
+  .h1-mipagina{
+    text-align: left;
+    margin: 0 0 12px 0;
+  }
+
+  /* Stats uniformes en una fila */
+  .stats-row{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  /* Cartas con alturas proporcionales y consistentes */
+  .progress-card,
+  .todo-card{
+    min-height: 140px;
+  }
+
+  /* To-Do compacta con scroll interno si crece */
+  .todo-card{
+    height: auto;
+    max-height: clamp(220px, 40vh, 320px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .todo-card .card-title{
+    flex: 0 0 auto;
+    margin-bottom: 10px;
+  }
+  .todo-card .todo-list{
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow: auto;
+    padding-right: 6px;
+  }
+
+  /* Scrollbar discreta */
+  .todo-card .todo-list::-webkit-scrollbar{ width: 8px; }
+  .todo-card .todo-list::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background: rgba(0,0,0,.15);
+  }
+
+  /* Suscripciones y alertas más densas */
+  .tags{ gap: 8px; }
+  .mp-card-title{ font-size: 13px; }
+
+  /* Padding vertical más contenido */
+  .page.mp{
+    padding-block: clamp(16px, 3vw, 32px);
+  }
+
+  /* Pomodoro y alertas ligeramente más grandes para balance visual */
+  .pomo-card, .alerts-card{
+    min-height: 180px;
+  }
+}

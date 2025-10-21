@@ -46,6 +46,24 @@ const Navbar = () => {
             Explora
           </NavLink>
 
+           <NavLink
+            to="/mipagina"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " active" : "")
+            }
+          >
+            Mi Página
+          </NavLink>
+
+          <NavLink
+            to="/instructions"
+            className={({ isActive }) =>
+              "nav-link" + (isActive ? " active" : "")
+            }
+          >
+            Instrucciones
+          </NavLink>
+
           {/* Ejemplo de más items visibles solo si hay sesión */}
           {user && (
             <>
