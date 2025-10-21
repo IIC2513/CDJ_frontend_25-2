@@ -30,7 +30,7 @@ const Landing = () => {
           <p className="points">Conecta 🤝 • Aprende 🎒 • Transforma 🌱</p>
 
           <div className="cta-row">
-            <a className="btn primary" href="sign">
+            <a className="btn primary" href="#auth">
               ¡ÚNETE A LA COMUNIDAD!
             </a>
           </div>

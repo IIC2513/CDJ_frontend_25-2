@@ -9,8 +9,8 @@ const Navbar = () => {
   // Simulación de estado de sesión (puedes reemplazar luego por Auth real)
   const [user, setUser] = React.useState(null);
 
-  const handleLogin = () => navigate("/login");
-  const handleSignUp = () => navigate("/signup");
+  const handleLogin = () => navigate("/");
+  const handleSignUp = () => navigate("/");
   const handleLogout = () => {
     setUser(null);
     navigate("/");
@@ -38,7 +38,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/explora"
+            to="/"
             className={({ isActive }) =>
               "nav-link" + (isActive ? " active" : "")
             }
@@ -72,14 +72,6 @@ const Navbar = () => {
                 }
               >
                 Informaciones
-              </NavLink>
-              <NavLink
-                to="/instrucciones"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
-              >
-                Instrucciones
               </NavLink>
             </>
           )}
