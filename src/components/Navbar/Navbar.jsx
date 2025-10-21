@@ -38,7 +38,7 @@ const Navbar = () => {
           </NavLink>
 
           <NavLink
-            to="/"
+            to="/explora"
             className={({ isActive }) =>
               "nav-link" + (isActive ? " active" : "")
             }
