@@ -1,6 +1,6 @@
 .instructions-wrapper {
   padding: 2rem;
-  max-width: 1000px;
+  max-width: 1500px;
   margin: auto;
   font-family: 'Inter', sans-serif;
 }
@@ -38,7 +38,7 @@
 
 .instruction-img {
   width: 100%;
-  max-height: 160px;
+  max-width: 100rem;
   object-fit: contain;
   margin-bottom: 1rem;
 }
