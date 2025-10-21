@@ -1,0 +1,26 @@
+.todo-card{
+  height: auto;                 
+  max-height: clamp(240px, 50vh, 420px);  
+  overflow: hidden;             
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-card .card-title{
+  flex: 0 0 auto;
+  margin-bottom: 12px;
+}
+
+.todo-card .todo-list{
+  flex: 1 1 auto;
+  min-height: 0;                
+  overflow: auto;             
+  padding-right: 6px;           
+}
+
+/* scrollbar más discreta en navegadores WebKit */
+.todo-card .todo-list::-webkit-scrollbar{ width: 8px; }
+.todo-card .todo-list::-webkit-scrollbar-thumb{
+  border-radius: 8px;
+  background: rgba(0,0,0,.15);
+}
