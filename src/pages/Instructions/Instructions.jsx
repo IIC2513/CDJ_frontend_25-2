@@ -65,7 +65,7 @@ const Instructions = () => {
   return (
     <div className="instructions-wrapper">
       <header className="instructions-header">
-        <h1 className="instructions-title">¿Cómo usar Lumen?</h1>
+        <h1 className="instructions-title">🧑🏼‍🏫 ¿Cómo usar Lumen? 🧑🏼‍🏫</h1>
       </header>
 
       <section className="instructions-grid">
