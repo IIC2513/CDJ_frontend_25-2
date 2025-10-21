@@ -1,5 +1,6 @@
 import "./AlertLists.css"
 
+/* Listas las alertas */
 export default function AlertsList({ items=[] }) {
   return (
     <div className="alerts-card">

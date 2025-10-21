@@ -1,13 +1,11 @@
-/* To-Do compacta con scroll interno cuando crece */
 .todo-card{
-  height: auto;                 /* tamaño natural cuando hay pocos ítems */
-  max-height: clamp(240px, 50vh, 420px);  /* tope adaptable */
-  overflow: hidden;             /* oculta lo que desborde del contenedor */
+  height: auto;                 
+  max-height: clamp(240px, 50vh, 420px);  
+  overflow: hidden;             
   display: flex;
   flex-direction: column;
 }
 
-/* El título fijo arriba, la lista es la que scrollea */
 .todo-card .card-title{
   flex: 0 0 auto;
   margin-bottom: 12px;
@@ -15,12 +13,12 @@
 
 .todo-card .todo-list{
   flex: 1 1 auto;
-  min-height: 0;                /* clave para permitir overflow dentro de flex */
-  overflow: auto;               /* aquí aparece el scroll */
-  padding-right: 6px;           /* respiro para la scrollbar */
+  min-height: 0;                
+  overflow: auto;             
+  padding-right: 6px;           
 }
 
-/* (Opcional) scrollbar más discreta en navegadores WebKit */
+/* scrollbar más discreta en navegadores WebKit */
 .todo-card .todo-list::-webkit-scrollbar{ width: 8px; }
 .todo-card .todo-list::-webkit-scrollbar-thumb{
   border-radius: 8px;

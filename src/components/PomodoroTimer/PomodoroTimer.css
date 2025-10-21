@@ -1,29 +1,29 @@
-/* Mantén tamaño estable del card, sin importar el contenido */
 .pomo-card{
-  /* ya tienes fondo/sombra/padding en tu base */
   min-height: 250px;              /* evita que cambie la altura cuando aparece el botón */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
+
 }
 
-/* Evita que los números cambien de ancho al contar (1 ocupa menos que 8) */
 .pomo-clock{
   font-size: 48px;
   font-weight: 800;
-  font-variant-numeric: tabular-nums; /* <-- clave */
+  font-variant-numeric: tabular-nums; 
 }
 
-/* El botón mantiene siempre el mismo ancho (igual al caso más largo) */
 .pomo-card .btn{
-  width: 150px;                    /* mismo ancho para INICIAR y DETENER */
+  width: 150px;                   
   text-align: center;
   font-size: 11px;
 }
 
-/* opcional: si quieres que el botón no “salte” al hacer hover */
 .pomo-card .btn:hover{
   transform: none;
+}
+
+.btn.danger2 {
+  background:#1c8ca2;
 }

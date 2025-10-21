@@ -8,7 +8,7 @@ import TodoList from "../../components/TodoList/TodoList";
 import PomodoroTimer from "../../components/PomodoroTimer/PomodoroTimer";
 
 export default function MiPagina() {
-  const [subs] = useState(["Cálculo III", "EDO", "Química", "Álgebra Lineal"]);
+  const [subs] = useState(["Cálculo III", "EDO", "Química", "Álgebra Lineal", "+"]);
   const [likes] = useState(16);
   const [uploads] = useState(3);
   const [pomos] = useState(5);
@@ -64,9 +64,9 @@ export default function MiPagina() {
         {/* Fila 3 */}
         <section className="g-subs">
           <div className="mp-card subs">
-            <div className="mp-card-title">SUSCRIPCIONES</div>
+            <div className="mp-card-title card-title">SUSCRIPCIONES</div>
             <div className="tags">
-              {subs.map((t, i) => <Tag key={t} text={t} active={i===3} />)}
+              {subs.map((t, i) => <Tag key={t} text={t} active={i===4} />)}
             </div>
           </div>
         </section>

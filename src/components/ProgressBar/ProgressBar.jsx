@@ -9,6 +9,7 @@ export default function ProgressBar({ value=0, title="PROGRESO" }) {
         <div className="bar-fill" style={{ width: `${pct}%` }} />
       </div>
       <div className="bar-meta">
+        {/* Limites barra */}
         <span>0%</span>
         <span className="bar-percent">{pct}%</span>
         <span>100%</span>
