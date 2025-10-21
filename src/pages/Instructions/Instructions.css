@@ -1,0 +1,55 @@
+.instructions-wrapper {
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.instructions-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.instructions-title {
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.instructions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .instructions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.instruction-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.instruction-img {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.instruction-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #4f46e5;
+}
+
+.instruction-card p {
+  font-size: 0.8rem;
+  color: #555;
+}
