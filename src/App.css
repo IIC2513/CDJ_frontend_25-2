@@ -2,9 +2,11 @@
    BASE GLOBAL + NAVBAR FIJA
    =============================== */
 
-/* Espacio superior para compensar la altura de la navbar fija */
+/* Altura de la navbar por defecto (desktop) */
+html { --navbar-h: 80px; } 
+
 body {
-  padding-top: 80px; /* Ajusta según la altura real de tu Navbar */
+  padding-top: var(--navbar-h);
   margin: 0;
   font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
   background-color: #fdfdfd;
@@ -37,21 +39,14 @@ body {
    ELEMENTOS COMUNES
    =============================== */
 
-/* Enlaces base */
 a {
-  color: #2494B3; /* teal de la paleta principal */
+  color: #2494B3;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s ease;
 }
+a:hover { color: #AA7FCF; }
 
-a:hover {
-  color: #AA7FCF; /* purple */
-}
-
-/* Superficies o contenedores genéricos
-   (renombrado para no interferir con .card de TeamCard)
-*/
 .app-surface {
   padding: 2em;
   background: #fff;
@@ -60,10 +55,9 @@ a:hover {
 }
 
 /* ===============================
-   UTILIDADES Y TIPOGRAFÍA
+   TIPOGRAFÍA
    =============================== */
 
-/* Títulos principales */
 h1, h2, h3 {
   font-family: "Karma", serif;
   line-height: 1.2;
@@ -71,7 +65,6 @@ h1, h2, h3 {
   color: #403F3F;
 }
 
-/* Párrafos generales */
 p {
   max-width: 70ch;
   margin: 0 auto 1.2em;
@@ -80,25 +73,28 @@ p {
 }
 
 /* ===============================
-   RESPONSIVE GENERAL
+   RESPONSIVE (ajuste de altura navbar)
    =============================== */
 
-@media (max-width: 768px) {
-  body {
-    padding-top: 72px; /* Navbar más compacta en móvil */
-  }
 
-  #root {
-    padding: 1.5rem;
-  }
+@media (max-width: 920px) {
+  html { --navbar-h: 116px; } 
+}
 
-  h1 {
-    font-size: 1.8rem;
-  }
+
+@media (max-width: 720px) {
+  html { --navbar-h: 144px; } 
+  #root { padding: 1.5rem; }
+  h1 { font-size: 1.8rem; }
+}
+
+
+@media (max-width: 380px) {
+  html { --navbar-h: 156px; }
 }
 
 /* ===============================
-   OTROS ESTILOS PREVIOS (heredados del template Vite)
+   RESTO (vite template heredado)
    =============================== */
 
 .logo {
@@ -107,32 +103,10 @@ p {
   will-change: filter;
   transition: filter 300ms;
 }
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
+.logo:hover { filter: drop-shadow(0 0 2em #646cffaa); }
+.logo.react:hover { filter: drop-shadow(0 0 2em #61dafbaa); }
+@keyframes logo-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg);} }
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+  a:nth-of-type(2) .logo { animation: logo-spin infinite 20s linear; }
 }
-
-/* Texto auxiliar (ej. pie de página, notas, etc.) */
-.read-the-docs {
-  color: #888;
-  font-size: 0.9rem;
-}
+.read-the-docs { color: #888; font-size: 0.9rem; }
