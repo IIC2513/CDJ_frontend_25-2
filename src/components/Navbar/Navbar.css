@@ -6,12 +6,13 @@
   --white: #fff;
 }
 
+/* Hardening layout sizing */
+*, *::before, *::after { box-sizing: border-box; }
+
 /* ===== Navbar fija superior ===== */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 0; left: 0; width: 100%;
   z-index: 1000;
   background: var(--green);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
@@ -32,30 +33,23 @@
 }
 
 /* Reset general */
-html, body {
-  margin: 0;
-  padding: 0;
-}
+html, body { margin: 0; padding: 0; }
 
 /* Marca izquierda */
+.nav-left { display: flex; align-items: center; }
 .nav-brand {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--white);
   text-decoration: none;
-  overflow: visible;
   border: 0 !important;
   outline: 0 !important;
 }
-
 .nav-logo {
-  height: 48px;
-  width: auto;
-  display: block;
+  height: 48px; width: auto; display: block;
   clip-path: inset(0 1px 0 0);
 }
-
 .brand-title {
   font-weight: 800;
   font-size: 22px;
@@ -68,8 +62,8 @@ html, body {
   gap: 28px;
   margin-left: 16px;
   flex: 1 1 auto;
+  min-width: 0; /* evita empujar y recortar */
 }
-
 .nav-link {
   color: #fff;
   text-decoration: none;
@@ -78,19 +72,21 @@ html, body {
   position: relative;
   padding: 6px 0;
   line-height: 1.2;
-}
 
-.nav-link:hover {
-  opacity: 1;
+  /* ⬇️ nunca cortar palabras */
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
+.nav-link:hover { opacity: 1; }
 
 /* Subrayado del link activo */
 .nav-link.active::after {
   content: "";
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -6px;
+  left: 0; right: 0; bottom: -6px;
   height: 2px;
   background: #fff;
   border-radius: 2px;
@@ -101,6 +97,7 @@ html, body {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0; /* no se comprime, evita solapamiento */
 }
 
 .link-signup {
@@ -122,10 +119,7 @@ html, body {
   cursor: pointer;
   transition: background 0.25s ease;
 }
-
-.outline-login:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
+.outline-login:hover { background: rgba(255, 255, 255, 0.12); }
 
 /* Botón engranaje */
 .icon-gear {
@@ -138,97 +132,61 @@ html, body {
   line-height: 1;
   cursor: pointer;
 }
-
-.icon-gear:hover {
-  background: rgba(255, 255, 255, 0.12);
-}
+.icon-gear:hover { background: rgba(255, 255, 255, 0.12); }
 
 /* ===== Responsive ===== */
 @media (max-width: 1200px) {
-  .navbar-inner {
-    gap: 14px;
-    padding: 10px 16px;
-  }
-
-  .nav-links {
-    gap: 22px;
-  }
-
-  .brand-title {
-    font-size: 20px;
-  }
+  .navbar-inner { gap: 14px; padding: 10px 16px; }
+  .nav-links { gap: 22px; }
+  .brand-title { font-size: 20px; }
 }
 
+/* Tablet: 2 filas (arriba marca + acciones, abajo links centrados) */
 @media (max-width: 920px) {
   .navbar-inner {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas:
+      "left . right"
+      "links links links";
+    row-gap: 8px;
+    align-items: center;
   }
-
+  .nav-left  { grid-area: left; }
+  .nav-right { grid-area: right; justify-self: end; }
   .nav-links {
-    order: 3;
-    width: 100%;
-    justify-content: center;
-    flex-wrap: wrap;
+    grid-area: links;
     margin-left: 0;
-    gap: 18px;
-  }
-
-  .nav-right {
-    order: 2;
+    justify-content: center;
+    gap: 18px 20px;  /* row-gap col-gap */
+    flex-wrap: wrap; /* ⬅️ permite bajar a otra línea */
+    width: 100%;
+    text-align: center;
   }
 }
 
+/* Móvil: envolver SIEMPRE, centrado; sin scroll horizontal */
 @media (max-width: 720px) {
+  .navbar-inner { padding: 10px 12px; }
   .nav-links {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
+    flex-wrap: wrap;       /* ⬅️ varias líneas */
+    overflow-x: visible;   /* ⬅️ nada se recorta ni scrollea */
+    gap: 14px 16px;
   }
-
-  .nav-links::-webkit-scrollbar {
-    display: none;
-  }
-
-  .outline-login {
-    padding: 8px 14px;
-    border-radius: 10px;
-  }
-
-  .nav-link {
-    padding: 4px 0;
-  }
+  .nav-link { padding: 4px 0; }
+  .outline-login { padding: 8px 14px; border-radius: 10px; }
 }
 
+/* Móviles pequeños: compactar logo y botones */
 @media (max-width: 560px) {
-  .brand-title {
-    display: none;
-  }
-
-  .nav-logo {
-    height: 42px;
-  }
-
-  .nav-right {
-    gap: 10px;
-  }
+  .brand-title { display: none; }
+  .nav-logo { height: 42px; }
+  .nav-right { gap: 10px; }
 }
 
+/* Ultra pequeño */
 @media (max-width: 380px) {
-  .nav-logo {
-    height: 38px;
-  }
-
-  .outline-login {
-    padding: 6px 12px;
-    border-radius: 10px;
-  }
-
-  .icon-gear {
-    padding: 5px 8px;
-    font-size: 14px;
-  }
+  .nav-logo { height: 38px; }
+  .outline-login { padding: 6px 12px; border-radius: 10px; }
+  .icon-gear { padding: 5px 8px; font-size: 14px; }
 }
