@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Landing.css";
 import logo from "../../../assets/cdj.png";
 import students from "../../../assets/students.png";
@@ -30,9 +31,9 @@ const Landing = () => {
           <p className="points">Conecta 🤝 • Aprende 🎒 • Transforma 🌱</p>
 
           <div className="cta-row">
-            <a className="btn primary" href="sign">
+            <Link className="btn primary" to="/signup">
               ¡ÚNETE A LA COMUNIDAD!
-            </a>
+            </Link>
           </div>
         </section>
 
