@@ -1,31 +1,31 @@
-.pomo-card{
-  min-height: 250px;              /* evita que cambie la altura cuando aparece el botón */
+.pomo-card {
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
-
 }
 
-.pomo-clock{
+.pomo-clock {
   font-size: 48px;
   font-weight: 800;
-  font-variant-numeric: tabular-nums; 
+  font-variant-numeric: tabular-nums;
+  color: var(--gray-900);
 }
 
-.pomo-card .btn{
-  width: 150px;                   
+.pomo-card .btn {
+  width: 150px;
   text-align: center;
   font-size: 11px;
 }
 
-.pomo-card .btn:hover{
+.pomo-card .btn:hover {
   transform: none;
 }
 
 .btn.danger2 {
-  background:#1c8ca2;
+  background: var(--brand-teal);
 }
 
 .pomo-time-selector {
@@ -34,33 +34,28 @@
   gap: 12px;
   font-size: 14px;
   font-weight: 500;
-  color: #4b5563;
+  color: var(--gray-700);
 }
 
 .pomo-time-selector select {
   padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid #d1d5db;
-  background-color: #f9fafb;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-300);
+  background-color: var(--surface-alt);
   font-size: 14px;
   font-weight: 500;
-  color: #374151;
+  color: var(--gray-800);
   cursor: pointer;
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 .pomo-time-selector select:focus {
   outline: none;
-  border-color: #4f46e5;
+  border-color: var(--brand-purple);
   box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
 }
 
 .pomo-time-selector label {
   font-weight: 600;
-  color: #6b7280;
-}
-
-.pomo-time-selector select::after {
-  content: "⏱️";
-  margin-left: 8px;
+  color: var(--gray-600);
 }

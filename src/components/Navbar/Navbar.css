@@ -1,27 +1,16 @@
-/* Fuente Inter */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
-
-:root {
-  --green: #B3CD4F;
-  --white: #fff;
-}
-
-/* Hardening layout sizing */
-*, *::before, *::after { box-sizing: border-box; }
-
-/* ===== Navbar fija superior ===== */
+/* Ajustes generales */
 .navbar {
   position: fixed;
-  top: 0; left: 0; width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 1000;
-  background: var(--green);
+  background: var(--navbar-bg);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  color: var(--navbar-text);
 }
 
-/* Contenedor interno */
 .navbar-inner {
   max-width: 1120px;
   margin: 0 auto;
@@ -29,119 +18,99 @@
   display: flex;
   align-items: center;
   gap: 18px;
-  color: var(--white);
+  color: var(--navbar-text);
 }
 
-/* Reset general */
-html, body { margin: 0; padding: 0; }
+.nav-left {
+  display: flex;
+  align-items: center;
+}
 
-/* Marca izquierda */
-.nav-left { display: flex; align-items: center; }
 .nav-brand {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--white);
+  color: var(--navbar-text);
   text-decoration: none;
-  border: 0 !important;
-  outline: 0 !important;
-}
-.nav-logo {
-  height: 48px; width: auto; display: block;
-  clip-path: inset(0 1px 0 0);
-}
-.brand-title {
-  font-weight: 800;
-  font-size: 22px;
-  line-height: 1;
+  border: none;
+  outline: none;
 }
 
-/* Links centrales */
+.nav-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+  clip-path: inset(0 1px 0 0);
+}
+
 .nav-links {
   display: flex;
   gap: 28px;
   margin-left: 16px;
   flex: 1 1 auto;
-  min-width: 0; /* evita empujar y recortar */
+  min-width: 0;
 }
+
 .nav-link {
-  color: #fff;
+  color: var(--navbar-text);
   text-decoration: none;
   font-weight: 700;
   opacity: 0.95;
   position: relative;
   padding: 6px 0;
   line-height: 1.2;
-
-  /* ⬇️ nunca cortar palabras */
   white-space: nowrap;
   overflow-wrap: normal;
   word-break: normal;
   hyphens: none;
-  -webkit-hyphens: none;
 }
+
 .nav-link:hover { opacity: 1; }
 
-/* Subrayado del link activo */
 .nav-link.active::after {
   content: "";
   position: absolute;
-  left: 0; right: 0; bottom: -6px;
+  left: 0;
+  right: 0;
+  bottom: -6px;
   height: 2px;
-  background: #fff;
+  background: var(--navbar-text);
   border-radius: 2px;
 }
 
-/* Botones derecha */
 .nav-right {
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-shrink: 0; /* no se comprime, evita solapamiento */
+  flex-shrink: 0;
 }
 
-.link-signup {
+.link-signup, .outline-login, .icon-gear, .icon-theme {
   background: transparent;
-  border: 0;
-  color: #fff;
+  border-radius: var(--radius);
+  padding: 6px 10px;
+  font-size: 14px;
+  line-height: 1;
   font-weight: 800;
   cursor: pointer;
-  padding: 10px 0;
+  transition: background 0.25s ease, border-color 0.25s ease;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: var(--navbar-text);
 }
 
 .outline-login {
-  background: transparent;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 12px;
   padding: 10px 18px;
-  font-weight: 800;
-  cursor: pointer;
-  transition: background 0.25s ease;
 }
-.outline-login:hover { background: rgba(255, 255, 255, 0.12); }
 
-/* Botón engranaje */
-.icon-gear {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  color: #fff;
-  border-radius: 10px;
-  padding: 6px 10px;
+.icon-theme {
   font-size: 16px;
-  line-height: 1;
-  cursor: pointer;
-}
-.icon-gear:hover { background: rgba(255, 255, 255, 0.12); }
-
-/* ===== Responsive ===== */
-@media (max-width: 1200px) {
-  .navbar-inner { gap: 14px; padding: 10px 16px; }
-  .nav-links { gap: 22px; }
-  .brand-title { font-size: 20px; }
 }
 
-/* Tablet: 2 filas (arriba marca + acciones, abajo links centrados) */
+.link-signup:hover, .outline-login:hover, .icon-gear:hover, .icon-theme:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* Responsive: se mantienen las reglas originales de las medias queries, pero heredando colores de tokens */
 @media (max-width: 920px) {
   .navbar-inner {
     display: grid;
@@ -152,41 +121,24 @@ html, body { margin: 0; padding: 0; }
     row-gap: 8px;
     align-items: center;
   }
-  .nav-left  { grid-area: left; }
+
+  .nav-left { grid-area: left; }
   .nav-right { grid-area: right; justify-self: end; }
   .nav-links {
     grid-area: links;
     margin-left: 0;
     justify-content: center;
-    gap: 18px 20px;  /* row-gap col-gap */
-    flex-wrap: wrap; /* ⬅️ permite bajar a otra línea */
+    gap: 18px 20px;
+    flex-wrap: wrap;
     width: 100%;
     text-align: center;
   }
 }
 
-/* Móvil: envolver SIEMPRE, centrado; sin scroll horizontal */
 @media (max-width: 720px) {
-  .navbar-inner { padding: 10px 12px; }
   .nav-links {
-    flex-wrap: wrap;       /* ⬅️ varias líneas */
-    overflow-x: visible;   /* ⬅️ nada se recorta ni scrollea */
+    flex-wrap: wrap;
+    overflow-x: visible;
     gap: 14px 16px;
   }
-  .nav-link { padding: 4px 0; }
-  .outline-login { padding: 8px 14px; border-radius: 10px; }
-}
-
-/* Móviles pequeños: compactar logo y botones */
-@media (max-width: 560px) {
-  .brand-title { display: none; }
-  .nav-logo { height: 42px; }
-  .nav-right { gap: 10px; }
-}
-
-/* Ultra pequeño */
-@media (max-width: 380px) {
-  .nav-logo { height: 38px; }
-  .outline-login { padding: 6px 12px; border-radius: 10px; }
-  .icon-gear { padding: 5px 8px; font-size: 14px; }
 }

@@ -3,23 +3,24 @@
   margin: auto;
   margin-top: 3rem;
   padding: 2rem;
-  background: #f9f9f9;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  font-family: 'Inter', sans-serif;
+  background: var(--surface-alt);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-family: "Inter", sans-serif;
+  color: var(--gray-900);
 }
 
 .signup-title {
   text-align: center;
   font-size: 1.8rem;
-  color: #333;
-  font-family: 'Karma', sans-serif;
+  color: var(--gray-900);
+  font-family: "Karma", sans-serif;
 }
 
 .signup-subtitle {
   text-align: center;
   margin-bottom: 1rem;
-  color: #666;
+  color: var(--gray-600);
 }
 
 .signup-form {
@@ -31,14 +32,22 @@
   display: block;
   margin-top: 1rem;
   font-weight: 600;
+  color: var(--gray-700);
 }
 
 .signup-form input {
   width: 100%;
   padding: 0.6rem;
   margin-top: 0.3rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--gray-900);
+  font-size: 1rem;
+}
+
+.signup-form input::placeholder {
+  color: var(--gray-500);
 }
 
 .signup-button {
@@ -46,11 +55,12 @@
   margin-top: 1.5rem;
   padding: 0.8rem;
   background-color: var(--brand-teal);
-  color: white;
+  color: var(--white);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius);
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .signup-button:hover {
@@ -61,6 +71,7 @@
   text-align: center;
   margin-top: 1rem;
   font-size: 0.9rem;
+  color: var(--gray-700);
 }
 
 .signup-footer a {
@@ -68,8 +79,8 @@
   text-decoration: none;
 }
 
-.signup-footer a:hover{
-  color: #9956d3;
+.signup-footer a:hover {
+  color: var(--sec-lilac);
   text-decoration: underline;
 }
 
