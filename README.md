@@ -1,7 +1,7 @@
 # E0 💫 - FRONTEND
 * Grupo CDJ: Constanza Vera, Daniela Muñoz y Justo García.
 
-## Enlace página web ⚠️
+## Enlace página web 
 https://lumenuc.netlify.app
 
 ## Descripción general 💭
