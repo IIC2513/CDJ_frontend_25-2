@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing/Landing";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Explora from "./pages/Explora/Explora";
+import MiPagina from "./pages/MiPagina/MiPagina"
 import Navbar from "./components/Navbar/Navbar";
 import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Landing />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/explora" element={<Explora />} />
+          <Route path="/mipagina" element={<MiPagina />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/instructions" element={<Instructions />} />
