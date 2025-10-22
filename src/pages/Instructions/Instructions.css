@@ -2,7 +2,8 @@
   padding: 2rem;
   max-width: 1500px;
   margin: auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
+  color: var(--gray-800);
 }
 
 .instructions-header {
@@ -13,7 +14,7 @@
 .instructions-title {
   font-size: 2rem;
   margin-top: 1rem;
-  color: #333;
+  color: var(--gray-900);
 }
 
 .instructions-grid {
@@ -22,18 +23,16 @@
 }
 
 @media (max-width: 600px) {
-  .instructions-grid {
-    column-count: 1;
-  }
+  .instructions-grid { column-count: 1; }
 }
 
 .instruction-card {
   display: inline-block;
   width: 100%;
-  background: #f9f9f9;
-  border-radius: 12px;
+  background: var(--surface-alt);
+  border-radius: var(--radius);
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.107);
+  box-shadow: var(--shadow);
   text-align: center;
   margin-bottom: 1.5rem;
   break-inside: avoid;
@@ -43,8 +42,8 @@
 
 .instruction-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 15px rgba(152,205,219, 0.3);
-  border: 1px solid rgba(152,205,219, 0.5);
+  box-shadow: 0 0 15px rgba(152, 205, 219, 0.3);
+  border: 1px solid rgba(152, 205, 219, 0.5);
 }
 
 .instruction-img {
@@ -63,5 +62,5 @@
 
 .instruction-card p {
   font-size: 0.8rem;
-  color: #555;
+  color: var(--gray-700);
 }

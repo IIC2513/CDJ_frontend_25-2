@@ -1,14 +1,13 @@
-/* Contenedor */
 .info-page {
   max-width: 960px;
   margin: 0 auto;
   padding: 1.75rem 1rem 3rem;
+  color: var(--gray-800);
 }
 
-/* Título */
 .info-header {
   margin-bottom: 1rem;
-  text-align: left; /* <-- alineado izquierda */
+  text-align: left;
 }
 
 .info-title {
@@ -18,59 +17,45 @@
   align-items: center;
   gap: 0.5rem;
   font-size: clamp(1.6rem, 2.2vw + 1rem, 2.25rem);
+  color: var(--gray-900);
 }
 
-/* Badge azul "i" */
 .info-badge {
   display: inline-grid;
   place-items: center;
   width: 28px;
   height: 28px;
   border-radius: 6px;
-  background: #2494B3; /* azul de la paleta */
-  color: #fff;
+  background: var(--brand-teal);
+  color: var(--white);
   font-weight: 700;
   font-family: "Inter", sans-serif;
   line-height: 1;
 }
 
-/* Lista */
 .info-list {
   display: grid;
   gap: 0.9rem;
   margin-top: 0.75rem;
 }
 
-/* Cards */
 .info-pill {
   list-style: none;
-  background: #F5F7F8;
-  border: 1px solid #E9EBED;
-  border-radius: 14px;
+  background: var(--surface-alt);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
   padding: 1rem 1.25rem;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
   font-size: 1rem;
   line-height: 1.6;
-  color: #403F3F; 
-  text-align: left; 
+  color: var(--gray-900);
+  text-align: left;
 }
 
-/* Etiqueta y texto */
-.info-label {
-  font-weight: 700;
-  display: inline;
-}
-.info-text {
-  opacity: 0.95;
-  display: inline;
-}
+.info-label { font-weight: 700; display: inline; }
+.info-text  { opacity: 0.95; display: inline; }
 
-/* Responsive*/
 @media (min-width: 720px) {
-  .info-list {
-    gap: 1rem;
-  }
-  .info-pill {
-    padding: 1rem 1.5rem;
-  }
+  .info-list { gap: 1rem; }
+  .info-pill { padding: 1rem 1.5rem; }
 }

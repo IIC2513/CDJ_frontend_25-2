@@ -1,14 +1,14 @@
 /* Contenedor (se usa en AboutUs) */
-.cards{
-  display:flex; flex-wrap:wrap; justify-content:center; gap:24px;
+.cards {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 24px;
 }
 
 /* Tarjeta base */
-.card{
-  --bg:#AA7FCF;       /* color lleno (se setea por accent-*) */
-  --bg-light:#CFC0DC; /* tono claro para expandida */
-  --fg:#fff;          /* texto sobre color lleno */
-  --fg-dark:#403F3F;  /* texto sobre color claro */
+.card {
+  --bg: #AA7FCF;       /* color lleno (se setea por accent-*) */
+  --bg-light: #CFC0DC; /* tono claro para expandida */
+  --fg: #fff;          /* texto sobre color lleno */
+  --fg-dark: var(--gray-900); /* texto oscuro para expandida y datos del equipo */
 
   position: relative;
   width: 260px; height: 320px;
@@ -21,50 +21,66 @@
   transition: transform .35s ease, box-shadow .35s ease, background-color .35s ease;
 }
 
-.card:hover{ transform: scale(1.04); box-shadow: 0 12px 26px rgba(0,0,0,.22); }
-.card:focus-visible{ outline: 3px solid #fff; outline-offset: 4px; }
+.card:hover { transform: scale(1.04); box-shadow: 0 12px 26px rgba(0,0,0,.22); }
+.card:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 
 /* Dos caras: mostramos una u otra */
-.card-face{
-  position:absolute; inset:0;
-  display:flex; flex-direction:column;
-  align-items:center; justify-content:center; text-align:center;
+.card-face {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center;
   padding: 20px;
   transition: opacity .25s ease;
 }
-.front{ opacity:1; }
-.back{ opacity:0; }
+.front { opacity: 1; }
+.back  { opacity: 0; }
 
 /* Expandida: fondo claro y cambia cara visible */
-.card.flipped{
+.card.flipped {
   background: var(--bg-light);
-  color: var(--fg-dark);
+  color: var(--fg-dark);     /* color oscuro en modo flipped */
   transform: scale(1.04);
 }
-.card.flipped .front{ opacity:0; pointer-events:none; }
-.card.flipped .back{ opacity:1; }
+.card.flipped .front { opacity: 0; pointer-events: none; }
+.card.flipped .back  { opacity: 1; }
 
 /* Imagen */
-.card img{
-  width:120px; height:120px; border-radius:50%;
-  object-fit:cover; margin-bottom:12px;
-  border:4px solid rgba(255,255,255,.85);
+.card img {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; margin-bottom: 12px;
+  border: 4px solid rgba(255,255,255,.85);
   box-shadow: 0 4px 10px rgba(0,0,0,.2);
 }
 
 /* Tipografías */
-.card-title{ font-family:"Karma",serif; font-size:1.25rem; font-weight:700; margin:6px 0 2px; }
-.card-role{ font-family:"Inter",sans-serif; font-size:.95rem; opacity:.95; }
-.card-bio{ max-width: 52ch; line-height:1.6; font-size:.98rem; }
+.card-title {
+  font-family: "Karma", serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 6px 0 2px;
+  color: var(--gray-900);  /* antes heredaba var(--fg) -> blanco */
+}
+.card-role {
+  font-family: "Inter", sans-serif;
+  font-size: .95rem;
+  opacity: .95;
+  color: var(--gray-900);  /* rol oscuro */
+}
+.card-bio {
+  max-width: 52ch;
+  line-height: 1.6;
+  font-size: .98rem;
+  color: var(--gray-900);  /* bio oscura */
+}
 
 /* Paletas por acento (tokens del proyecto) */
-.accent-lilac { --bg:#AA7FCF; --bg-light:#CFC0DC; }
-.accent-teal  { --bg:#2494B3; --bg-light:#98CDDB; }
-.accent-amber { --bg:#FFC82B; --bg-light:#FFDF82; }
-.accent-purple{ --bg:#AA7FCF; --bg-light:#CFC0DC; }
+.accent-lilac  { --bg: var(--brand-purple); --bg-light: var(--sec-lilac); }
+.accent-teal   { --bg: var(--brand-teal);   --bg-light: var(--sec-sky);  }
+.accent-amber  { --bg: var(--brand-yellow); --bg-light: var(--sec-amber);}
+.accent-purple { --bg: var(--brand-purple); --bg-light: var(--sec-lilac);}
 
 /* Responsive */
-@media (max-width:768px){
-  .cards{ flex-direction:column; align-items:center; }
-  .card{ width: 92%; height: 300px; }
+@media (max-width:768px) {
+  .cards { flex-direction: column; align-items: center; }
+  .card { width: 92%; height: 300px; }
 }
