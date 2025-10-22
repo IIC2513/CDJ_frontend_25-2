@@ -2,7 +2,7 @@
 * Grupo CDJ: Constanza Vera, Daniela Muñoz y Justo García.
 
 ## Enlace página web ⚠️
-https://iridescent-griffin-cff786.netlify.app/
+https://lumenuc.netlify.app/instructions
 
 ## Descripción general 💭
 
