@@ -5,7 +5,9 @@ import {
   Navigate,
 } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
-import { ThemeProvider } from "./context/ThemeContext"; 
+import { ThemeProvider } from "./context/ThemeContext";
+import ScrollToTop from "./components/ScrollToTop";   
+
 import Navbar from "./components/Navbar/Navbar";
 import Landing from "./pages/Landing/Landing";
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -19,9 +21,10 @@ import "./App.css";
 
 export default function App() {
   return (
-    <ThemeProvider> 
+    <ThemeProvider>
       <AuthProvider>
         <Router>
+          <ScrollToTop />                
           <Navbar />
           <Routes>
             <Route path="/" element={<Landing />} />

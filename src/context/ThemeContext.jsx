@@ -12,19 +12,16 @@ import React, {
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  // Cargar tema desde localStorage o preferencia del sistema
+  // Cargar tema desde localStorage; si no existe, usar "light" por defecto
   const [theme, setTheme] = useState(() => {
     const stored = localStorage.getItem("lumen_theme");
     if (stored) {
       return stored;
     }
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    return prefersDark ? "dark" : "light";
+    return "light";
   });
 
-  // Al cambiar el tema: actualizar clase y persistencia
+  // Al cambiar el tema: actualizar clase en <html> y persistir en localStorage
   useEffect(() => {
     const root = document.documentElement;
     if (theme === "dark") {
@@ -35,7 +32,7 @@ export const ThemeProvider = ({ children }) => {
     localStorage.setItem("lumen_theme", theme);
   }, [theme]);
 
-  // Función para alternar
+  // Función para alternar entre claro y oscuro
   const toggleTheme = () => {
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   };
