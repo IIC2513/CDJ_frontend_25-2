@@ -49,6 +49,7 @@
 .instruction-img {
   width: 100%;
   max-width: 600px;
+  max-height: 400px;
   height: auto;
   object-fit: contain;
   margin-bottom: 1rem;
@@ -63,4 +64,19 @@
 .instruction-card p {
   font-size: 0.8rem;
   color: var(--gray-700);
+}
+
+/* Selecciona la imagen cuya alt coincide exactamente con el título del elemento Pomodoro */
+.instruction-card img[alt="Usa el pomodoro para estudiar"].instruction-img {
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.instruction-card img[alt="Revisa tus estadísticas"].instruction-img {
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
 }

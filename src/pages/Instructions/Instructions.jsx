@@ -1,5 +1,4 @@
 import "./Instructions.css";
-import ejemploImg from "../../../assets/cdj.png";
 import Comentarios from "../../../assets/Comentarios.png";
 import BarraBusqueda from "../../../assets/BarraBusqueda.png";
 import ExplorarApuntes from "../../../assets/ExplorarApuntes.png";
@@ -7,6 +6,9 @@ import Info from "../../../assets/InformacionesImg.png";
 import MisArchivosImg from "../../../assets/MisArchivos.png";
 import SubirArchivo from "../../../assets/SubirArchivo.png";
 import VisualizarPublicacion from "../../../assets/VisualizarPublicacion.png";
+import Progreso from "../../../assets/Progreso.png";
+import Metricas from "../../../assets/Metricas.png";
+import Pomodoro from "../../../assets/Pomodoro.png";
 
 const instrucciones = [
   {
@@ -22,12 +24,12 @@ const instrucciones = [
   {
     titulo: "Organiza tus metas",
     cuerpo: "Desde <b>'Mi página'</b> puedes crear metas académicas personalizadas. Agrega tareas, marca tu progreso y mantén el foco en tus objetivos. Esta herramienta te permite visualizar tu avance y mantenerte motivado durante el semestre.",
-    imagen: ejemploImg,
+    imagen: Progreso,
   }, 
   {
     titulo: "Revisa tus estadísticas",
-    cuerpo: "En tu perfil encontrarás la sección <b>'Mi página'</b>, donde podrás ver cuántos archivos has publicado, cuántos likes has recibido y cuántos apuntes has adquirido. Es una forma de medir tus avances y tu impacto en la comunidad.",
-    imagen: ejemploImg,
+    cuerpo: "En tu perfil encontrarás la sección <b>'Mi página'</b>, donde podrás ver cuántos likes has recibido, cuántos pomodoros has completado, cuántos archivos has publicado y cuántos apuntes has adquirido. Es una forma de medir tus avances y tu impacto en la comunidad.",
+    imagen: Metricas,
   },
   {
     titulo: "Gestiona tus archivos",
@@ -57,7 +59,7 @@ const instrucciones = [
   {
     titulo: "Usa el pomodoro para estudiar",
     cuerpo: "En <b>'Mi página'</b> puedes activar el temporizador Pomodoro para estudiar en ciclos de 25 minutos. Cada sesión se registra en tus estadísticas, ayudándote a medir tu concentración y progreso durante la semana.",
-    imagen: ejemploImg,
+    imagen: Pomodoro,
   },
 ];
 
