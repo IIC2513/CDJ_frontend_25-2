@@ -1,6 +1,9 @@
 # E0 💫 - FRONTEND
 * Grupo CDJ: Constanza Vera, Daniela Muñoz y Justo García.
 
+## Enlace página web ⚠️
+https://iridescent-griffin-cff786.netlify.app/
+
 ## Descripción general 💭
 
 **¿De qué se tratará el proyecto?**
@@ -71,21 +74,21 @@ En Lumen existen tres tipos de usuarios:
 ![Isotipo](assets/Isotipo.png)
 
 ### 📱 Ejemplo de aplicación
-#### Landing Page [PANTALLAZO DE LO HECHO PROGRAMADO]:
+#### Landing Page [programado]:
 ![LandingPage - Formato 1](assets/Views/LandingPage_formato1.png)
 
 ![LandingPage - Formato 2](assets/Views/LandingPage_formato2.png)
 
 ![LandingPage - Formato 3](assets/Views/LandingPage_formato3.png)
 
-#### About us [PANTALLAZO DE LO HECHO PROGRAMADO]:
+#### About us [programado]
 ![AboutUs - Principal - Formato 1](assets/Views/AboutUs_principal_formato1.png)
 
 ![AboutUs - Principal - Formato 2](assets/Views/AboutUs_principal_formato2.png)
 
 ![AboutUs - Principal - Formato 3](assets/Views/AboutUs_principal_formato3.png)
 
-##### Interacciones (seleccionar tarjetas):
+##### Interacciones (seleccionar tarjetas) [programado]:
 
 ![AboutUs - Feature - Formato 1](assets/Views/AboutUs_mostrarfeature_formato1.png)
 
@@ -95,14 +98,29 @@ En Lumen existen tres tipos de usuarios:
 
 *En esta sección la vista de la infomación de cada integrante se hizo mediante un hover interactivo, extraído de [uiverse.io](https://uiverse.io/kamehame-ha/chilly-snake-91).
 
-#### Explora
-![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(2).png)
-![Ejemplo de aplicación](assets/Views/ventanasemergentes(1).png)
+## TODAS LAS VISTAS 💫
 
-#### Mi página
-![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(3).png)
+### Landing page [programado]
+![Ejemplo de aplicación](assets/Views/1.png)
+![Ejemplo de aplicación](assets/Views/1-1.png)
 
-#### Mis archivos
+### Sign Up [programado]
+![Ejemplo de aplicación](assets/Views/2.png)
+
+### Login [programado]
+![Ejemplo de aplicación](assets/Views/3.png)
+
+### About Us [programado]
+![Ejemplo de aplicación](assets/Views/4.png)
+
+#### Explora [programado]
+![Ejemplo de aplicación](assets/Views/5.png)
+![Ejemplo de aplicación](assets/Views/emergente.png)
+
+#### Mi página [programado]
+![Ejemplo de aplicación](assets/Views/6.png)
+
+#### Mis archivos [mockups]
 ![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(4).png)
 
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(2).png)
@@ -112,8 +130,11 @@ En Lumen existen tres tipos de usuarios:
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(6).png)
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(7).png)
 
-#### Informaciones
-![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(5).png)
+#### Informaciones [programado]
+![Ejemplo de aplicación](assets/Views/7.png)
+
+#### Instrucciones [programado]
+![Ejemplo de aplicación](assets/Views/8.png)
 
 ## Referencias ⚠️
 * Uso de inteligencia artificial (ChatGPT - Copilot) para formular textos más profesionales, para hacer el logo y para generar la imagen de las personas abrazadas en el _landing page_.
