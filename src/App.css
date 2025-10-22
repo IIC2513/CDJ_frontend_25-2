@@ -1,8 +1,25 @@
+/* ===== Base global + Navbar fija ===== */
 html {
-  /* la altura de la navbar será configurada según el breakpoint en Navbar.jsx */
+  /* Altura por defecto de la navbar (desktop) */
   --navbar-h: 80px;
 }
 
+/* Ajustar la altura de la navbar según los breakpoints definidos en Navbar.jsx */
+@media (max-width: 920px) {
+  html { --navbar-h: 116px; }
+}
+
+@media (max-width: 720px) {
+  html { --navbar-h: 144px; }
+  #root { padding: 1.5rem; }
+  h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 380px) {
+  html { --navbar-h: 156px; }
+}
+
+/* Aplicar espacio superior al body según la altura de la navbar */
 body {
   padding-top: var(--navbar-h);
   margin: 0;
@@ -14,6 +31,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Contenedor principal (centrado y con ancho máximo) */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -22,12 +40,14 @@ body {
   box-sizing: border-box;
 }
 
+/* Contenedor reutilizable */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(1rem, 3vw, 2rem);
 }
 
+/* Tipografía de títulos */
 h1, h2, h3 {
   font-family: "Karma", serif;
   line-height: 1.2;
@@ -35,6 +55,7 @@ h1, h2, h3 {
   color: var(--gray-900);
 }
 
+/* Párrafos generales */
 p {
   max-width: 70ch;
   margin: 0 auto 1.2em;
@@ -43,6 +64,7 @@ p {
   color: var(--gray-700);
 }
 
+/* Enlaces base */
 a {
   color: var(--brand-teal);
   text-decoration: none;
@@ -54,6 +76,7 @@ a:hover {
   color: var(--brand-purple);
 }
 
+/* Superficie genérica (tarjetas, modales, etc.) */
 .app-surface {
   padding: 2em;
   background: var(--card);
