@@ -1,109 +1,68 @@
 import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext"; 
 import logo from "../../../assets/cdj3.png";
 import "./Navbar.css";
 
 const Navbar = () => {
   const navigate = useNavigate();
-
-  // Simulación de estado de sesión (puedes reemplazar luego por Auth real)
-  const [user, setUser] = React.useState(null);
+  const { user, logout } = useAuth(); 
 
   const handleLogin = () => navigate("/login");
   const handleSignUp = () => navigate("/signup");
   const handleLogout = () => {
-    setUser(null);
+    logout();           
     navigate("/");
   };
+
+  const cls = (isActive) => "nav-link" + (isActive ? " active" : "");
 
   return (
     <nav className="navbar">
       <div className="navbar-inner">
-        {/* IZQUIERDA: logo + marca */}
+        {/* IZQUIERDA: logo */}
         <div className="nav-left">
           <Link to="/" className="nav-brand">
             <img src={logo} alt="Lumen" className="nav-logo" />
           </Link>
         </div>
 
-        {/* CENTRO: enlaces */}
+        {/* CENTRO: enlaces públicos */}
         <div className="nav-links">
-          <NavLink
-            to="/about"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
-          >
+          <NavLink to="/about" className={({ isActive }) => cls(isActive)}>
             Conócenos
           </NavLink>
 
-          <NavLink
-            to="/explora"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
-          >
+          <NavLink to="/explora" className={({ isActive }) => cls(isActive)}>
             Explora
           </NavLink>
 
-           <NavLink
-            to="/mipagina"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
-          >
-            Mi Página
+          <NavLink to="/mipagina" className={({ isActive }) => cls(isActive)}>
+            Mi página
           </NavLink>
 
-          <NavLink
-            to="/instructions"
-            className={({ isActive }) =>
-              "nav-link" + (isActive ? " active" : "")
-            }
-          >
+          <NavLink to="/informaciones" className={({ isActive }) => cls(isActive)}>
+            Informaciones
+          </NavLink>
+
+          <NavLink to="/instructions" className={({ isActive }) => cls(isActive)}>
             Instrucciones
           </NavLink>
 
-          {/* Ejemplo de más items visibles solo si hay sesión */}
+          {/* Enlaces visibles sólo si hay sesión */}
           {user && (
             <>
-              <NavLink
-                to="/stats"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
-              >
-                Mis estadísticas
-              </NavLink>
-              <NavLink
-                to="/files"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
-              >
+              <NavLink to="/files" className={({ isActive }) => cls(isActive)}>
                 Mis archivos
               </NavLink>
-              <NavLink
-                to="/info"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
-              >
-                Informaciones
-              </NavLink>
-              <NavLink
-                to="/instrucciones"
-                className={({ isActive }) =>
-                  "nav-link" + (isActive ? " active" : "")
-                }
-              >
-                Instrucciones
+              <NavLink to="/stats" className={({ isActive }) => cls(isActive)}>
+                Mis estadísticas
               </NavLink>
             </>
           )}
         </div>
 
-        {/* DERECHA: botones */}
+        {/* DERECHA: acciones */}
         <div className="nav-right">
           {!user ? (
             <>
