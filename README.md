@@ -2,7 +2,7 @@
 * Grupo CDJ: Constanza Vera, Daniela Muñoz y Justo García.
 
 ## Enlace página web ⚠️
-https://lumenuc.netlify.app/instructions
+https://lumenuc.netlify.app
 
 ## Descripción general 💭
 
