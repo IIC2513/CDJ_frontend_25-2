@@ -1,20 +1,17 @@
 /* Animación de entrada */
 @keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* Tarjetas base con animación */
+/* Tarjetas base con animación y tokens */
 .mp-card,
 .progress-card,
 .todo-card,
 .alerts-card,
 .pomo-card {
   background: var(--card);
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 20px;
   position: relative;
   z-index: 0;
@@ -34,26 +31,22 @@
 .todo-card:hover,
 .alerts-card:hover,
 .pomo-card:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.10);
 }
 
-/* Título uniforme */
+/* Títulos con buen contraste en ambos temas */
 .mp-card-title,
 .card-title {
   font-weight: 800;
   font-size: 14px;
-  letter-spacing: 0.06em;
-  color: #6b7280;
+  letter-spacing: .06em;
+  color: var(--gray-800);
   margin-bottom: 20px;
   text-transform: uppercase;
 }
 
 /* Grid tipo masonry */
-.mp-grid {
-  column-count: 3;
-  column-gap: 24px;
-}
-
+.mp-grid { column-count: 3; column-gap: 24px; }
 .mp-grid > section {
   display: inline-block;
   width: 100%;
@@ -61,19 +54,9 @@
   break-inside: avoid;
 }
 
-/* Responsivo: móvil */
-@media (max-width: 600px) {
-  .mp-grid {
-    column-count: 1;
-  }
-}
-
-/* Responsivo: tablet */
-@media (min-width: 601px) and (max-width: 1024px) {
-  .mp-grid {
-    column-count: 2;
-  }
-}
+/* Responsivo */
+@media (max-width: 600px) { .mp-grid { column-count: 1; } }
+@media (min-width: 601px) and (max-width: 1024px) { .mp-grid { column-count: 2; } }
 
 /* Contenedor general */
 .page.mp {
@@ -86,8 +69,9 @@
 }
 
 .h1-mipagina {
-  margin-top: 0px;
+  margin-top: 0;
   text-align: left;
+  color: var(--gray-900);
 }
 
 /* Stats internos */
@@ -98,22 +82,108 @@
 }
 
 /* Tags */
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
+.tags { display: flex; flex-wrap: wrap; gap: 10px; }
 
 /* Suscripciones */
-.mp-card.subs {
-  padding: 20px;
-}
+.mp-card.subs { padding: 20px; }
 
 /* Scrollbar discreta */
-.todo-card .todo-list::-webkit-scrollbar {
-  width: 8px;
-}
+.todo-card .todo-list::-webkit-scrollbar { width: 8px; }
 .todo-card .todo-list::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(0,0,0,0.15);
 }
+
+/* ============================
+   BOOST DE CONTRASTE (MODO CLARO)
+   ============================ */
+:root:not(.dark) .mp-card,
+:root:not(.dark) .progress-card,
+:root:not(.dark) .todo-card,
+:root:not(.dark) .alerts-card,
+:root:not(.dark) .pomo-card {
+  background: var(--surface);
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.10);
+}
+
+:root:not(.dark) .mp-card-title,
+:root:not(.dark) .card-title { color: var(--gray-900); }
+
+/* ============================
+   ALERTAS — Layout “antes”
+   (frase corrida con pill gris)
+   ============================ */
+
+/* Reset de layout: forzamos flex en línea */
+.alerts-card .alert {
+  display: flex !important;
+  align-items: center;
+  flex-wrap: wrap;         /* permite saltos naturales */
+  gap: 8px;                /* separa bloques como espacios */
+  padding: 14px 16px;
+  border-radius: 12px;
+  line-height: 1.55;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Colores por tema */
+:root:not(.dark) .alerts-card .alert {
+  background: var(--surface-alt);       /* gris 100 */
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 2px 6px rgba(0,0,0,.03);
+}
+:root.dark .alerts-card .alert {
+  background: var(--card);
+  border: 1px solid var(--gray-700);
+}
+
+/* Tipografía semántica dentro de cada alerta */
+.alerts-card .alert > * {                /* todo inline y sin anchos forzados */
+  display: inline;
+  margin: 0;
+  width: auto !important;
+}
+.alerts-card .alert strong {             /* autor */
+  font-weight: 800;
+  color: var(--gray-900);
+}
+.alerts-card .alert p,
+.alerts-card .alert span {               /* texto corriente */
+  color: var(--gray-800);
+}
+.alerts-card .alert em,
+.alerts-card .alert cite, 
+.alerts-card .alert q {                  /* cita entre comillas */
+  font-style: italic;
+  color: var(--gray-900);
+}
+
+/* Separación entre alertas */
+.alerts-card .alert + .alert { margin-top: 12px; }
+
+/* ============================
+   CONTRASTE EXTRA — Stats (modo claro)
+   ============================ */
+:root:not(.dark) .stats-row > * {
+  background: var(--surface);
+  border: 1px solid var(--gray-200);
+  box-shadow: 0 10px 28px rgba(0,0,0,.10);
+  border-radius: var(--radius);
+}
+:root:not(.dark) .stats-row > * h1,
+:root:not(.dark) .stats-row > * h2,
+:root:not(.dark) .stats-row > * h3,
+:root:not(.dark) .stats-row > * .stat-number,
+:root:not(.dark) .stats-row > * .stat-value { color: var(--gray-900); }
+:root:not(.dark) .stats-row > * p,
+:root:not(.dark) .stats-row > * .stat-label,
+:root:not(.dark) .stats-row > * .stat-title { color: var(--gray-700); }
+
+/* (Opcional) Si tus ítems de ToDo tienen clase .todo-item, puedes activar:
+:root:not(.dark) .todo-card .todo-item {
+  background: var(--surface-alt);
+  border: 1px solid var(--gray-200);
+}
+*/

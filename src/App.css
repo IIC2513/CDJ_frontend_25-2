@@ -1,24 +1,18 @@
-/* ===============================
-   BASE GLOBAL + NAVBAR FIJA
-   =============================== */
-
-/* Altura de la navbar por defecto (desktop) */
-html { --navbar-h: 80px; } 
+html {
+  /* la altura de la navbar será configurada según el breakpoint en Navbar.jsx */
+  --navbar-h: 80px;
+}
 
 body {
   padding-top: var(--navbar-h);
   margin: 0;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-  background-color: #fdfdfd;
-  color: #403F3F;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  background-color: var(--surface);
+  color: var(--gray-800);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
-/* ===============================
-   ESTRUCTURA GENERAL
-   =============================== */
 
 #root {
   max-width: 1280px;
@@ -28,41 +22,17 @@ body {
   box-sizing: border-box;
 }
 
-/* Contenedor reutilizable */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: clamp(1rem, 3vw, 2rem);
 }
 
-/* ===============================
-   ELEMENTOS COMUNES
-   =============================== */
-
-a {
-  color: #2494B3;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-a:hover { color: #AA7FCF; }
-
-.app-surface {
-  padding: 2em;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-/* ===============================
-   TIPOGRAFÍA
-   =============================== */
-
 h1, h2, h3 {
   font-family: "Karma", serif;
   line-height: 1.2;
   margin: 0.5em 0;
-  color: #403F3F;
+  color: var(--gray-900);
 }
 
 p {
@@ -70,43 +40,24 @@ p {
   margin: 0 auto 1.2em;
   font-size: 1rem;
   line-height: 1.6;
+  color: var(--gray-700);
 }
 
-/* ===============================
-   RESPONSIVE (ajuste de altura navbar)
-   =============================== */
-
-
-@media (max-width: 920px) {
-  html { --navbar-h: 116px; } 
+a {
+  color: var(--brand-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
-
-@media (max-width: 720px) {
-  html { --navbar-h: 144px; } 
-  #root { padding: 1.5rem; }
-  h1 { font-size: 1.8rem; }
+a:hover {
+  color: var(--brand-purple);
 }
 
-
-@media (max-width: 380px) {
-  html { --navbar-h: 156px; }
+.app-surface {
+  padding: 2em;
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--gray-900);
 }
-
-/* ===============================
-   RESTO (vite template heredado)
-   =============================== */
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover { filter: drop-shadow(0 0 2em #646cffaa); }
-.logo.react:hover { filter: drop-shadow(0 0 2em #61dafbaa); }
-@keyframes logo-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg);} }
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo { animation: logo-spin infinite 20s linear; }
-}
-.read-the-docs { color: #888; font-size: 0.9rem; }
