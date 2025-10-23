@@ -26,6 +26,9 @@
   line-height: 1.6;
   margin-bottom: clamp(16px, 2vw, 24px);
   color: var(--gray-900);
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s ease forwards;
+  break-inside: avoid;
 }
 
 /* ====== Contenedor de tarjetas ====== */
@@ -35,6 +38,9 @@
   justify-content: center;
   gap: 20px;
   overflow: visible;
+  transform: translateY(10px);
+  animation: fadeInUp 0.4s ease forwards;
+  break-inside: avoid;
 }
 
 /* ====== Tarjeta base ====== */
