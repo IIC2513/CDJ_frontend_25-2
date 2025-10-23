@@ -138,4 +138,5 @@ En Lumen existen tres tipos de usuarios:
 
 ## Referencias ⚠️
 * Uso de inteligencia artificial (ChatGPT - Copilot) para formular textos más profesionales, para hacer el logo y para generar la imagen de las personas abrazadas en el _landing page_.
+* Además, se utilizó inteligencia artificial para apoyar la revisión y la buena realización del código, el análisis de posibles errores y la mejora del diseño CSS.
 * [uiverse.io](https://uiverse.io/) para ideas de estilo y css.
