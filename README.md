@@ -1,7 +1,7 @@
 # E0 💫 - FRONTEND
 * Grupo CDJ: Constanza Vera, Daniela Muñoz y Justo García.
 
-## Enlace página web 
+## Enlace página web 🧩
 https://lumenuc.netlify.app
 
 ## Descripción general 💭
@@ -62,12 +62,13 @@ En Lumen existen tres tipos de usuarios:
 ![Paleta de colores de alertas](assets/Design/AlertColors.png)
 ![Tipografías](assets/Design/Typography.png)
 
-### 🔍 Vistas principales
+### 🔍 Vistas principales [programadas]
 ![Mockup1](assets/Views/Mockups(1).png)
 ![Mockup2](assets/Views/Mockups(2).png)
 ![Mockup3](assets/Views/Mockups(3).png)
 ![Mockup4](assets/Views/Mockups(4).png)
 ![Mockup5](assets/Views/Mockups(5).png)
+![Mockup6](assets/Views/Mockups(6).png)
 
 ### 👀 Logo
 ![Isologo](assets/Isologo.png)
@@ -120,14 +121,20 @@ En Lumen existen tres tipos de usuarios:
 #### Mi página [programado]
 ![Ejemplo de aplicación](assets/Views/6.png)
 
-#### Mis archivos [mockups]
+#### Mis archivos [hechos en canva]
 ![Ejemplo de aplicación](assets/Views/PaginasPrincipalesPC(4).png)
 
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(2).png)
+*Este es el único de esta sección que está programado.
+
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(3).png)
+
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(4).png)
+
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(5).png)
+
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(6).png)
+
 ![Ejemplo de aplicación](assets/Views/ventanasemergentes(7).png)
 
 #### Informaciones [programado]
