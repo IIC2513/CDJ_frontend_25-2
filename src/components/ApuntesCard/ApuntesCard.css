@@ -94,4 +94,7 @@
 
 @media (max-width: 640px) {
   .paper { height: 130px; }
+  .apunte-img {
+  margin-top: -13px;
+  }
 }
